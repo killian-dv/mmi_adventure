@@ -7,6 +7,6 @@
     <title>MMI Adventure</title>
 </head>
 <body>
-    <p>coucou mec</p>
+    <p>coucou mec cv</p>
 </body>
 </html>
