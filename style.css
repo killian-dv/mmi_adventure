@@ -64,6 +64,21 @@ h1{
     border: 1px solid #54BAF3;
 }
 
+/* BUTTON */
+.container_button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.inscription_button {
+    background-color: #54BAF3;
+    color: white;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
 /* FOOTER MOBILE */
 footer {
     display: flex;

@@ -11,7 +11,10 @@
         <h1>Consignes :</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni libero eos ullam reiciendis enim dolor autem voluptates est odio nam possimus, neque perspiciatis delectus architecto quaerat dicta distinctio cum! Similique eum expedita veniam voluptatibus ullam error excepturi laborum, accusamus cum minus, a, laudantium quae rem optio ipsam ut esse quam?</p>
     </div>
-    
+    <div class="container_button">
+        <a class="inscription_button" href="register.php">Inscription</a>
+    </div>
+   
     </section>
     <?php require('inc/footer.php'); ?>
 </body>
