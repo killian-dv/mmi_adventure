@@ -15,7 +15,8 @@
             if ($_GET['id'] == "2") { echo "<h1>Indice 2</h1>".$date;}
             if ($_GET['id'] == "3") { echo "<h1>Indice 3</h1>".$date;}
         } else{
-            echo "<h1>Vous êtes sur la page Indice, des QrCodes sont cachés un peu partout dans l'IUT</h1>";
+            // page indice sans ?id
+            echo "<h1>Vous êtes sur la page Indice, des QrCodes sont cachés un peu partout dans l'IUT (pas d'id selectionné)</h1>";
         }
     ?>
 </body>
