@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Page Indice </title>
-</head>
-<body>
+<?php require('inc/debut_html.php'); ?>
+    <title>Page Indice</title>
+    <?php require('inc/header.php'); ?>
     <?php
         if(!empty($_GET['id'])){
             $date = date("H:i:s");
@@ -19,6 +12,5 @@
             echo "<h1>Vous êtes sur la page Indice, des QrCodes sont cachés un peu partout dans l'IUT (pas d'id selectionné)</h1>";
         }
     ?>
-    <p>l</p>
 </body>
 </html>
