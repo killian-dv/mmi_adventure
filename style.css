@@ -4,5 +4,6 @@
 }
 
 body{
+    min-height: 100vh;
     background: linear-gradient(#FFF1D5, #B7EBF4);
 }
