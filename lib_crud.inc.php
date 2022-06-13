@@ -14,7 +14,7 @@ function connexion_resort()
     try {
     // on essaie de se connecter
     // le port et le dbname ci-dessous sont À ADAPTER à vos données
-    $mabd = new PDO('mysql:host=localhost;dbname=;charset=UTF8;', LUTILISATEUR, LEMOTDEPASSE);
+    $mabd = new PDO('mysql:host=localhost;dbname=db_adventure;charset=UTF8;', LUTILISATEUR, LEMOTDEPASSE);
     // on passe le codage en utf-8
     $mabd->query('SET NAMES utf8;');
     } catch (PDOException $e) {
