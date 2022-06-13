@@ -26,4 +26,20 @@ footer {
     background-color: #040B1B;
     color: white;
     text-align: center;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+footer > img {
+    width: 6rem;
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer > div > img {
+    width: 10rem;
 }
