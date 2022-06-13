@@ -1,5 +1,5 @@
 <?php require('inc/debut_html.php'); ?>
-    <title>Page Indice</title>
+    <title>MMI Adventure - Indice</title>
     <?php require('inc/header.php'); ?>
     <?php
         if(!empty($_GET['id'])){
