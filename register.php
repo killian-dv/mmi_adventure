@@ -3,16 +3,23 @@
     <section class="background">
     <?php require('inc/header.php'); ?>
 
+    <?php 
+        if(!empty($_POST['ekip_name'])){
+            $ekip_name = $_POST['ekip_name'];
+            echo $ekip_name;
+        } else{ 
+            echo'
+            <h1 class="m17">Inscription</h1>
 
-    <h1 class="m17">Inscription</h1>
-    <div id="register">
-        <label for="ekip_name">Renseignez le nom de votre équipe si dessous&nbsp;:</label></br>
-        <input type="text" id="ekip_name" name="ekip_name" minlength="3" size="10">
-    </div>
+            <form action="register.php" method="POST">
+            <div id="register">
+                <label for="ekip_name">Renseignez le nom de votre équipe si dessous&nbsp;:</label></br>
+                <input type="text" id="ekip_name" name="ekip_name" minlength="3">
+            </div>
 
-    <form action="register.php" method="POST">
-        <input type="submit" value="Submit">
-    </form> 
+                <div id="register_form"><input class="inscription_button" type="submit" value="C’est parti"></div>
+            </form>';}
+    ?>
 
     </section>
     <?php require('inc/footer.php'); ?>
