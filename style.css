@@ -29,6 +29,22 @@ h1{
     font-size: 24px;
 }
 
+.m15{
+    margin-top: 15%;
+}
+
+#register{
+    width: 90%;
+    margin: 5% auto auto auto;
+}
+
+#ekip_name{
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid #54BAF3;
+}
+
 /* FOOTER MOBILE */
 footer {
     display: flex;

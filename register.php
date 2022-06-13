@@ -3,10 +3,12 @@
     <section class="background">
     <?php require('inc/header.php'); ?>
 
-    <h1>Inscription</h1>
+    <h1 class="m15">Inscription</h1>
 
-    <label for="register">Renseignez le nom de votre équipe si dessous :</label>
-    <input type="text" id="register" name="register" minlength="3" size="10">
+    <div id="register">
+        <label for="ekip_name">Renseignez le nom de votre équipe si dessous :</label></br>
+        <input type="text" id="ekip_name" name="ekip_name" minlength="3" size="10">
+    </div>
 
     </section>
     <?php require('inc/footer.php'); ?>
