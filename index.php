@@ -14,7 +14,6 @@
     <div class="container_button">
         <a class="inscription_button" href="register.php">Inscription</a>
     </div>
-   <p>coucou</p>
     </section>
     <?php require('inc/footer.php'); ?>
 </body>
