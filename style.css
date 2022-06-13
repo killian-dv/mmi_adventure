@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-body{
+.background {
     height: auto;
     min-height: 100vh;
     background: linear-gradient(#FFF1D5, #B7EBF4);
@@ -21,4 +21,14 @@ header > img{
 
 h1{
     font-family: 'Cabin', sans-serif;
+}
+
+/* FOOTER MOBILE */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #040B1B;
+    color: white;
+    text-align: center;
 }
