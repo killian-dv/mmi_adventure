@@ -16,3 +16,10 @@ header{
 header > img{
     width: 33%;
 }
+
+@media screen and (max-width: 768px){
+    
+}
+header > img{
+    width: 300px;
+}
