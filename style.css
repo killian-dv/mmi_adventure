@@ -6,6 +6,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    color: #040B1B;
 }
 
 .background {
@@ -27,6 +28,12 @@ h1{
     text-align: center;
     font-family: 'Cabin', sans-serif;
     font-size: 24px;
+    color: #040B1B;
+}
+
+.plage_blender {
+    width: 100%;
+    margin-top: 20%;
 }
 
 /* FOOTER MOBILE */
