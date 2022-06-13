@@ -58,6 +58,7 @@ h1{
 
 #ekip_name{
     width: 100%;
+    margin: 5% auto auto auto;
     height: 50px;
     border-radius: 15px;
     border: 1px solid #54BAF3;
