@@ -12,3 +12,7 @@ body{
 header{
     text-align: center;
 }
+
+header > img{
+    width: 33%;
+}
