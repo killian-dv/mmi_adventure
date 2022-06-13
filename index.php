@@ -7,6 +7,6 @@
     <title>MMI Adventure</title>
 </head>
 <body>
-    <p>Bienvenue sur MMI Adventure</p>
+    <p>Bienvenue sur MMI Adventure. Blalala</p>
 </body>
 </html>
