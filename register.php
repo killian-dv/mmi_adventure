@@ -11,12 +11,11 @@
             $mabd = connexion_mmi_adventure();
             if (doublon($mabd, $ekip_name)==false){
                 ajout_equipe($mabd, $ekip_name, $date);
-                setcookie("id_ekip", recup_id_ekip($mabd, $ekip_name), time()+60*60*24*10, '/');
+                setcookie("id_ekip", recup_id_ekip($mabd, $ekip_name), time()+3600);
                 echo '<div class="quit_page"><p>Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p></div>';
                 echo $_COOKIE["id_ekip"];
             }else {
                 header('location: register.php');
-                echo 'Nom d\'équipe déjà selectionné !';
             }
             deconnexion_mmi_adventure($mabd);
         } else{ 
