@@ -322,3 +322,14 @@ function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
     die();
 }
 }
+
+function total_indice_trouve ($mabd, $ekip_id) {
+  $req = 'UPDATE db_adventure SET total_indice+=1 WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultat = $mabd->query($req);
+} catch (PDOException $e) {
+    // s'il y a une erreur, on l'affiche
+    echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+    die();
+}
+}
