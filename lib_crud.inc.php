@@ -292,9 +292,7 @@ function recup_id_ekip($mabd, $ekip_name) {
       die();
   }
   // pour chaque auteur, on met son nom et prénom dans une balise <option>
-  foreach ($resultat as $value) {
-      echo $value['equipe_id']; 
-  } 
+  echo $resultat; 
 }
 
 function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
