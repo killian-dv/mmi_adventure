@@ -314,6 +314,7 @@ function doublon($mabd, $ekip_name){
 
 function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
   $req = 'UPDATE db_adventure SET $id_qr_code = TRUE WHERE equipe_id ='.$ekip_id.'';
+  echo $req;
   try {
     $resultat = $mabd->query($req);
 } catch (PDOException $e) {
