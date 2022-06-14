@@ -245,7 +245,8 @@ function ajout_equipe($mabd, $ekip_name, $date) {
 }
 
 function recup_id_ekip($mabd, $ekip_name) {
-  $req = "SELECT equipe_id FROM db_adventure WHERE nom_equipe ="  .$ekip_name . '';
+  $req = 'SELECT equipe_id FROM db_adventure WHERE nom_equipe ='  .$ekip_name . '';
+  
     try {
       $resultat = $mabd->query($req);
   } catch (PDOException $e) {
@@ -253,6 +254,9 @@ function recup_id_ekip($mabd, $ekip_name) {
       echo '<p>Erreur : ' . $e->getMessage() . '</p>';
       die();
   }
+  foreach ($resultat as $value) {
+    echo $value['equipe_id']; 
+} 
 }
 
 // function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
