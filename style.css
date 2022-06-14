@@ -57,6 +57,11 @@ h1{
     margin: 30% auto auto auto;
 }
 
+#cookies_auto{
+    font-size: 10px;
+    text-align: center;
+}
+
 #register{
     width: 90%;
     margin: 5% auto auto auto;

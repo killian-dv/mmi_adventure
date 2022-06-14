@@ -14,7 +14,7 @@ function connexion_mmi_adventure()
     try {
     // on essaie de se connecter
     // le port et le dbname ci-dessous sont À ADAPTER à vos données
-    $mabd = new PDO('mysql:host=localhost;dbname=;charset=UTF8;', LUTILISATEUR, LEMOTDEPASSE);
+    $mabd = new PDO('mysql:host=localhost;dbname=mmi_adventure;charset=UTF8;', LUTILISATEUR, LEMOTDEPASSE);
     // on passe le codage en utf-8
     $mabd->query('SET NAMES utf8;');
     } catch (PDOException $e) {
@@ -236,12 +236,11 @@ function ajout_equipe($mabd, $ekip_name, $date)
 {
   $req = 'INSERT INTO db_adventure (nom_equipe, heure_debut)
   VALUES("'.$ekip_name.'", "'.$date.'")';
-    //echo '<p>' . $req . '</p>' . "\n";
     try {
-        $resultat = $mabd->query($req);
-    } catch (PDOException $e) {
-        // s'il y a une erreur, on l'affiche
-        echo '<p>Erreur : ' . $e->getMessage() . '</p>';
-        die();
-    }
+      $resultat = $mabd->query($req);
+  } catch (PDOException $e) {
+      // s'il y a une erreur, on l'affiche
+      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+      die();
+  }
 }
