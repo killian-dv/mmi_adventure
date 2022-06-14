@@ -13,7 +13,8 @@
                 ajout_equipe($mabd, $ekip_name, $date);
                 setcookie('id_ekip', recup_id_ekip($mabd, $ekip_name), time()+60*60*24*10, '/');
             }else {
-                header('location: register.php')
+                header('location: register.php');
+                echo 'petite merde';
             }
             deconnexion_mmi_adventure($mabd);
 
