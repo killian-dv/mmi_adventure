@@ -291,8 +291,9 @@ function recup_id_ekip($mabd, $ekip_name) {
       echo '<p>Erreur : ' . $e->getMessage() . '</p>';
       die();
   }
-  // pour chaque auteur, on met son nom et prénom dans une balise <option>
-  echo $resultat; 
+  foreach ($resultat as $value) {
+    echo $value['equipe_id']; 
+} 
 }
 
 function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
