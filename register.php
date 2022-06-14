@@ -6,7 +6,12 @@
     <?php 
         if(!empty($_POST['ekip_name'])){
             $ekip_name = $_POST['ekip_name'];
-            echo '<p id="">Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p>';
+            $date = date("H:i:s");
+            connexion_mmi_adventure();
+            $sql = 'INSERT INTO db_adventure (nom_equipe, heure_debut)
+                    VALUES("'.$ekip_name.'", "'.$date.'")';
+
+            echo '<div class="quit_page"><p>Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p></div>';
         } else{ 
             echo'
             <h1 class="m17">Inscription</h1>
