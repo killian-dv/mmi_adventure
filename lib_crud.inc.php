@@ -297,11 +297,18 @@ function recup_id_ekip($mabd, $ekip_name) {
 }
 
 function doublon($mabd, $ekip_name){
-  $ekip_name = mysqli_query('SELECT nom_equipe FROM db_adventure WHERE nom_equipe ="'.$ekip_name.'"');
-  $verdict = mysqli_fetch_array($ekip_name, MYSQL_ASSOC);
-  if ($ekip_name == $verdict['produitsNom'])
-  { echo "Ce produit existe déjà dans la base de données<br>";
-  exit;
+  $ekip_name = 'SELECT nom_equipe FROM db_adventure WHERE nom_equipe ="'.$ekip_name.'"';
+  try {
+    $resultat = $mabd->query($req);
+} catch (PDOException $e) {
+    // s'il y a une erreur, on l'affiche
+    echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+    die();
+}
+  foreach($resultat as $value){
+    if ($value ['nom_equipe']==$ekip_name){
+      echo 'Nom d\'équipe déjà selectionné !';
+    }
   }
 }
 
