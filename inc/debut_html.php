@@ -1,3 +1,4 @@
+<?php require('lib_crud.inc.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
