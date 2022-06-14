@@ -1,4 +1,7 @@
-    <?php setcookie('id_ekip', '', time()+60*60*24*10, '/'); ?>
+    <?php 
+    if (empty($_COOKIE['id_ekip'])) {
+        setcookie('id_ekip', '', time()+60*60*24*10, '/'); 
+    }?>
     <?php require('inc/debut_html.php'); ?>
     <title>MMI Adventure - Inscription</title>
     <section class="background">
