@@ -4,6 +4,9 @@
     <?php require('inc/header.php'); ?>
     <?php $indice_id=$_GET['id'];
     $tab_info = recup_id_indice($indice_id);
+    $mabd = connexion_mmi_adventure();
+    ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
+    deconnexion_mmi_adventure($mabd);
     ?>
     <?php
     if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
