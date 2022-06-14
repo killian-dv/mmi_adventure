@@ -16,7 +16,7 @@
                 echo $_COOKIE["id_ekip"];
             }else {
                 header('location: register.php');
-                echo 'petite merde';
+                echo 'Nom d\'équipe déjà selectionné !';
             }
             deconnexion_mmi_adventure($mabd);
         } else{ 
