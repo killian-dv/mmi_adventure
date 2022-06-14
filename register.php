@@ -22,6 +22,10 @@
                 <input type="text" id="ekip_name" name="ekip_name" minlength="3">
             </div>
 
+            <div id="cookies_auto">
+                <p>Lorsque vous appuyez sur le boutton "C\'est parti" le chrono se lance !</br>En appuyant sur "C\'est parti" vous acceptez l\'ensemble des cookies.</p>
+            </div>
+
                 <div id="register_form"><input class="inscription_button" type="submit" value="C’est parti"></div>
             </form>';}
     ?>
