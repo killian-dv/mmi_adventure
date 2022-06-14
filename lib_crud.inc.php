@@ -27,7 +27,7 @@ function connexion_mmi_adventure()
 }
 
 // déconnexion de la base de données
-function deconnexion_mmi_adventure($mabd) {
+function deconnexion_mmi_adventure(&$mabd) {
     // on se déconnexte en mettant la variable de connexion à null 
     $mabd=null;
 }
