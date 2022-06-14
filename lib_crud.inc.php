@@ -131,10 +131,4 @@ function ajout_equipe($mabd, $ekip_name, $date)
       echo '<p>Erreur : ' . $e->getMessage() . '</p>';
       die();
   }
-  if ($resultat->rowCount() == 1) {
-      echo '<p>Le pays ' . $ekip_name . ' a été ajouté au catalogue.</p>' . "\n";
-  } else {
-      echo '<p>Erreur lors de l\'ajout.</p>' . "\n";
-      die();
-  }
 }
