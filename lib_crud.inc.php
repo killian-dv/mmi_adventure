@@ -292,7 +292,7 @@ function recup_id_ekip($mabd, $ekip_name) {
       die();
   }
   foreach ($resultat as $value) {
-    echo $value['equipe_id']; 
+    return $value['equipe_id'];
 } 
 }
 
