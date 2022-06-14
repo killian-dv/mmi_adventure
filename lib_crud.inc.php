@@ -4,7 +4,7 @@
   // MMI ADVENTURE
 
   // insertion des dépendances
-  require 'secretxyz123.inc.php';
+  require 'secretxyz123.php';
 
 // connexion à la base de données
 function connexion_mmi_adventure()
