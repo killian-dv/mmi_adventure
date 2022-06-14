@@ -11,7 +11,6 @@
             ajout_equipe($mabd, $ekip_name, $date);
             recup_id_ekip($mabd, $ekip_name);
             deconnexion_mmi_adventure($mabd);
-            
 
             //setcookie('id_ekip', recup_id_ekip($mabd, $ekip_name), time()+60*60*24*10, '/');
 
