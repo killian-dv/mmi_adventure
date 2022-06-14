@@ -63,6 +63,9 @@ h1{
     border-radius: 15px;
     border: 1px solid #54BAF3;
 }
+.title_numéro_indice {
+    margin-top: 2rem;
+}
 
 /* BUTTON */
 .container_button {
