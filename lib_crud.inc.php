@@ -307,7 +307,7 @@ function doublon($mabd, $ekip_name){
 }
   foreach($resultat as $value){
     if ($value ['nom_equipe']==$ekip_name){
-      echo 'Nom d\'équipe déjà selectionné !';
+      return true;
     }
   }
 }
