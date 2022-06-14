@@ -125,10 +125,16 @@ function ajout_equipe($mabd, $ekip_name, $date)
   VALUES("'.$ekip_name.'", "'.$date.'")';
     //echo '<p>' . $req . '</p>' . "\n";
     try {
-        $resultat = $mabd->query($req);
-    } catch (PDOException $e) {
-        // s'il y a une erreur, on l'affiche
-        echo '<p>Erreur : ' . $e->getMessage() . '</p>';
-        die();
-    }
+      $resultat = $mabd->query($req);
+  } catch (PDOException $e) {
+      // s'il y a une erreur, on l'affiche
+      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+      die();
+  }
+  if ($resultat->rowCount() == 1) {
+      echo '<p>Le pays ' . $name . ' a été ajouté au catalogue.</p>' . "\n";
+  } else {
+      echo '<p>Erreur lors de l\'ajout.</p>' . "\n";
+      die();
+  }
 }
