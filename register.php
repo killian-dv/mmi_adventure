@@ -11,9 +11,9 @@
             $mabd = connexion_mmi_adventure();
             doublon($mabd, $ekip_name);
             ajout_equipe($mabd, $ekip_name, $date);
-            deconnexion_mmi_adventure($mabd);
 
             setcookie('id_ekip', recup_id_ekip($mabd, $ekip_name), time()+60*60*24*10, '/');
+            deconnexion_mmi_adventure($mabd);
 
             echo '<div class="quit_page"><p>Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p></div>';
             echo $_COOKIE["id_ekip"];
