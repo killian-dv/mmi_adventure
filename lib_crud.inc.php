@@ -297,9 +297,9 @@ function recup_id_ekip($mabd, $ekip_name) {
 }
 
 function doublon(){
-  $doublon = mysqli_query('SELECT nom_equipe FROM db_adventure WHERE nom_equipe ="'.$doublon.'"');
-  $verdict = mysqli_fetch_array($doublon, MYSQL_ASSOC);
-  if ($doublon == $verdict['produitsNom'])
+  $ekip_name = mysqli_query('SELECT nom_equipe FROM db_adventure WHERE nom_equipe ="'.$ekip_name.'"');
+  $verdict = mysqli_fetch_array($ekip_name, MYSQL_ASSOC);
+  if ($ekip_name == $verdict['produitsNom'])
   { echo "Ce produit existe déjà dans la base de données<br>";
   exit;
   }
