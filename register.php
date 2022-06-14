@@ -12,14 +12,13 @@
             if (doublon($mabd, $ekip_name)==false){
                 ajout_equipe($mabd, $ekip_name, $date);
                 setcookie('id_ekip', recup_id_ekip($mabd, $ekip_name), time()+60*60*24*10, '/');
+                echo '<div class="quit_page"><p>Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p></div>';
+                echo $_COOKIE["id_ekip"];
             }else {
                 header('location: register.php');
                 echo 'petite merde';
             }
             deconnexion_mmi_adventure($mabd);
-
-            echo '<div class="quit_page"><p>Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p></div>';
-            echo $_COOKIE["id_ekip"];
         } else{ 
             echo'
             <h1 class="m17">Inscription</h1>
