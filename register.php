@@ -9,6 +9,7 @@
             $date = date("H:i:s");
             $mabd = connexion_mmi_adventure();
             ajout_equipe($mabd, $ekip_name, $date);
+            deconnexion_mmi_adventure();
 
             echo '<div class="quit_page"><p>Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p></div>';
         } else{ 
