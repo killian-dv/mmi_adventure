@@ -256,5 +256,5 @@ function recup_id_ekip($mabd, $ekip_name) {
 }
 
 function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
-
+  $req = "UPDATE * FROM db_adventure WHERE "
 }
