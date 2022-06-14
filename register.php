@@ -8,7 +8,8 @@
             $ekip_name = $_POST['ekip_name'];
             $date = date("H:i:s");
             $mabd = connexion_mmi_adventure();
-            $test= ajout_equipe($mabd, $ekip_name, $date);
+            ajout_equipe($mabd, $ekip_name, $date);
+            $test = recup_id_ekip($mabd, $ekip_name);
             deconnexion_mmi_adventure($mabd);
             echo $test;
 
