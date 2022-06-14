@@ -8,8 +8,9 @@
             $ekip_name = $_POST['ekip_name'];
             $date = date("H:i:s");
             connexion_mmi_adventure();
-            $sql = 'INSERT INTO db_adventure (nom_equipe, heure_debut)
+            $req = 'INSERT INTO db_adventure (nom_equipe, heure_debut)
                     VALUES("'.$ekip_name.'", "'.$date.'")';
+            echo '<p>' . $req . '</p>' . "\n";
 
             echo '<div class="quit_page"><p>Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p></div>';
         } else{ 
