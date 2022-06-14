@@ -17,6 +17,7 @@
                 echo '<p>Erreur : ' . $e->getMessage() . '</p>';
                 die();
             }
+            echo '<p>' . $req . '</p>' . "\n";
 
             echo '<div class="quit_page"><p>Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p></div>';
         } else{ 
