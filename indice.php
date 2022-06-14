@@ -1,6 +1,6 @@
 <?php 
     if (empty($_COOKIE['id_ekip'])) {
-        header('location : register.php')
+        header('location : register.php');
     }
     require('inc/debut_html.php'); ?>
     <title>MMI Adventure - Indice</title>
