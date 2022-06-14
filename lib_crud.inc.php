@@ -296,7 +296,7 @@ function recup_id_ekip($mabd, $ekip_name) {
 } 
 }
 
-function doublon(){
+function doublon($mabd, $ekip_name){
   $ekip_name = mysqli_query('SELECT nom_equipe FROM db_adventure WHERE nom_equipe ="'.$ekip_name.'"');
   $verdict = mysqli_fetch_array($ekip_name, MYSQL_ASSOC);
   if ($ekip_name == $verdict['produitsNom'])
