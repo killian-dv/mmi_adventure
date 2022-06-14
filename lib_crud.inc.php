@@ -131,4 +131,10 @@ function ajout_equipe($mabd, $ekip_name, $date)
         echo '<p>Erreur : ' . $e->getMessage() . '</p>';
         die();
     }
+    if ($resultat->rowCount() == 1) {
+        echo '<p>Le pays ' . $ekip_name . ' a été modifié.</p>' . "\n";
+    } else {
+        echo '<p>Erreur lors de la modification.</p>' . "\n";
+        die();
+    }
 }
