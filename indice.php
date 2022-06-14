@@ -1,4 +1,8 @@
-<?php require('inc/debut_html.php'); ?>
+<?php 
+    if (empty($_COOKIE['id_ekip'])) {
+        header('location : register.php')
+    }
+    require('inc/debut_html.php'); ?>
     <title>MMI Adventure - Indice</title>
     <section class="background">
     <?php require('inc/header.php'); ?>
