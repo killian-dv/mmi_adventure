@@ -6,7 +6,7 @@
     <?php 
         if(!empty($_POST['ekip_name'])){
             $ekip_name = $_POST['ekip_name'];
-            echo $ekip_name;
+            echo '<p id="">Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p>';
         } else{ 
             echo'
             <h1 class="m17">Inscription</h1>
