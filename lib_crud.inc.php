@@ -284,6 +284,7 @@ function ajout_equipe($mabd, $ekip_name, $date) {
 
 function recup_id_ekip($mabd, $ekip_name) {
   $req = 'SELECT equipe_id FROM db_adventure WHERE nom_equipe ='  .$ekip_name . '';
+  echo $req;
   try {
       $resultat = $mabd->query($req);
   } catch (PDOException $e) {
