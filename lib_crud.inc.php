@@ -126,7 +126,7 @@ function ajout_equipe($mabd, $ekip_name, $date)
     echo '<p>' . $req . '</p>' . "\n";
     try {
       $resultat = $mabd->query($req);
-      dump($resultat);
+      var_dump($resultat);
   } catch (PDOException $e) {
       // s'il y a une erreur, on l'affiche
       echo '<p>Erreur : ' . $e->getMessage() . '</p>';
