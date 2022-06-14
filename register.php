@@ -7,7 +7,7 @@
         if(!empty($_POST['ekip_name'])){
             $ekip_name = $_POST['ekip_name'];
             $date = date("H:i:s");
-            connexion_mmi_adventure();
+            $mabd = connexion_mmi_adventure();
             $req = 'INSERT INTO db_adventure (nom_equipe, heure_debut)
                     VALUES("'.$ekip_name.'", "'.$date.'")';
             try {
