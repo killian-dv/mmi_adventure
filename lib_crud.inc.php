@@ -297,7 +297,7 @@ function recup_id_ekip($mabd, $ekip_name) {
 }
 
 function doublon($mabd, $ekip_name){
-  $ekip_name = 'SELECT nom_equipe FROM db_adventure WHERE nom_equipe ="'.$ekip_name.'"';
+  $req = 'SELECT nom_equipe FROM db_adventure WHERE nom_equipe ="'.$ekip_name.'"';
   try {
     $resultat = $mabd->query($req);
 } catch (PDOException $e) {
