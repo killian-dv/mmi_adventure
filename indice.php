@@ -2,8 +2,11 @@
     <title>MMI Adventure - Indice</title>
     <section class="background">
     <?php require('inc/header.php'); ?>
+    <?php $_GET['id']=$indice_id;
+    recup_id_indice($indice_id)
+    ?>
     
-    <h1 class="title_numero_indice">Indice n°01</h1>
+    <h1 class="title_numero_indice">Indice n°<?php $numero_indice ?></h1>
 
     <div class="paragraphe">
     <h1>Anecdote</h1>

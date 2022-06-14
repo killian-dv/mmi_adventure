@@ -36,7 +36,7 @@ function deconnexion_mmi_adventure(&$mabd) {
 function recup_id_indice($indice_id) {
   if(!empty($indice_id)){
     // indice n°1
-    if ($indice_id == "3s8e8RYax3QD9Q") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "3s8e8RYax3QD9Q") { $numero_indice=9999;}
     // indice n°2
     if ($indice_id == "URAVnis5Ej55ka") { echo "<h1>Indice 1</h1>";}
     // indice n°3
@@ -116,4 +116,25 @@ function recup_id_indice($indice_id) {
     // page indice sans ?id
     //echo "<h1>Vous êtes sur la page Indice, des QrCodes sont cachés un peu partout dans l'IUT (pas d'id selectionné)</h1>";
 }
+}
+
+// Ajouter le nom de l'équipe et l'heure de départ dans la BDD
+function ajout_equipe($mabd, $ekip_name, $date)
+{
+  $req = 'INSERT INTO db_adventure (nom_equipe, heure_debut)
+  VALUES("'.$ekip_name.'", "'.$date.'")';
+    //echo '<p>' . $req . '</p>' . "\n";
+    try {
+        $resultat = $mabd->query($req);
+    } catch (PDOException $e) {
+        // s'il y a une erreur, on l'affiche
+        echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+        die();
+    }
+    if ($resultat->rowCount() == 1) {
+        echo '<p>Le pays ' . $ekip_name . ' a été modifié.</p>' . "\n";
+    } else {
+        echo '<p>Erreur lors de la modification.</p>' . "\n";
+        die();
+    }
 }
