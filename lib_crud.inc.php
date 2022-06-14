@@ -36,82 +36,195 @@ function deconnexion_mmi_adventure(&$mabd) {
 function recup_id_indice($indice_id) {
   if(!empty($indice_id)){
     // indice n°1
-    if ($indice_id == "3s8e8RYax3QD9Q") { $numero_indice=9999;}
+    if ($indice_id == "3s8e8RYax3QD9Q") { 
+      $numero_indice=1;
+      $anecdote = 'Vous vous trouvez dans le studio, c\'est ici que vous allez tourner de petites vidéos avec les caméras situées dans la petite pièce avec la vitre. Attention, ne tentez pas de voler quelque chose, cette pièce est sous vidéo surveillance.';
+    }
     // indice n°2
-    if ($indice_id == "URAVnis5Ej55ka") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "URAVnis5Ej55ka") { 
+      $numero_indice=2;
+      $anecdote = 'lalalalala';
+    }
     // indice n°3
-    if ($indice_id == "KEwBhcT4NRPi4e") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "KEwBhcT4NRPi4e") { 
+      $numero_indice=3;
+      $anecdote = 'lalalalala';
+    }
     // indice n°4
-    if ($indice_id == "MP5jZvdqmZpUKc") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "MP5jZvdqmZpUKc") { 
+      $numero_indice=4;
+      $anecdote = 'lalalalala';
+    }
     // indice n°5
-    if ($indice_id == "43KLnZYRGJaTph") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "43KLnZYRGJaTph") { 
+      $numero_indice=5;
+      $anecdote = 'lalalalala';
+    }
     // indice n°6
-    if ($indice_id == "uVqWQT944J69Qn") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "uVqWQT944J69Qn") { 
+      $numero_indice=6;
+      $anecdote = 'lalalalala';
+    }
     // indice n°7
-    if ($indice_id == "zBkWrW2gw9CWGG") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "zBkWrW2gw9CWGG") { 
+      $numero_indice=7;
+      $anecdote = 'lalalalala';
+    }
     // indice n°8
-    if ($indice_id == "JbxcUSq5a6M3tf") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "JbxcUSq5a6M3tf") { 
+      $numero_indice=8;
+      $anecdote = 'lalalalala';
+    }
     // indice n°9
-    if ($indice_id == "ocSD7SmpU5Ydb7") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "ocSD7SmpU5Ydb7") { 
+      $numero_indice=9;
+      $anecdote = 'lalalalala';
+    }
     // indice n°10
-    if ($indice_id == "bfw8KCJMhBxyzi") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "bfw8KCJMhBxyzi") { 
+      $numero_indice=10;
+      $anecdote = 'lalalalala';
+    }
     // indice n°11
-    if ($indice_id == "2r9nHDWBnkhT6o") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "2r9nHDWBnkhT6o") { 
+      $numero_indice=11;
+      $anecdote = 'lalalalala';
+    }
     // indice n°12
-    if ($indice_id == "x457MNk4yLubaR") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "x457MNk4yLubaR") { 
+      $numero_indice=12;
+      $anecdote = 'lalalalala';
+    }
     // indice n°13
-    if ($indice_id == "jUQqb5BAFRx8aa") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "jUQqb5BAFRx8aa") { 
+      $numero_indice=13;
+      $anecdote = 'lalalalala';
+    }
     // indice n°14
-    if ($indice_id == "ts8WzX2Kzfs9VS") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "ts8WzX2Kzfs9VS") { 
+      $numero_indice=14;
+      $anecdote = 'lalalalala';
+    }
     // indice n°15
-    if ($indice_id == "obrHTUxBCux3YJ") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "obrHTUxBCux3YJ") { 
+      $numero_indice=15;
+      $anecdote = 'lalalalala';
+    }
     // indice n°16
-    if ($indice_id == "Q4vP5TG5vhjUeU") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "Q4vP5TG5vhjUeU") { 
+      $numero_indice=16;
+      $anecdote = 'lalalalala';
+    }
     // indice n°17
-    if ($indice_id == "U2UMirtsvigjcr") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "U2UMirtsvigjcr") { 
+      $numero_indice=17;
+      $anecdote = 'lalalalala';
+    }
     // indice n°18
-    if ($indice_id == "xF5osYnd6qc8jw") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "xF5osYnd6qc8jw") { 
+      $numero_indice=18;
+      $anecdote = 'lalalalala';
+    }
     // indice n°19
-    if ($indice_id == "BZbdXCP67faRnf") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "BZbdXCP67faRnf") { 
+      $numero_indice=19;
+      $anecdote = 'lalalalala';
+    }
     // indice n°20
-    if ($indice_id == "8pVTu8vn4h5eH5") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "8pVTu8vn4h5eH5") { 
+      $numero_indice=20;
+      $anecdote = 'lalalalala';
+    }
     // indice n°21
-    if ($indice_id == "DkJ9BerWWoLDUh") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "DkJ9BerWWoLDUh") { 
+      $numero_indice=21;
+      $anecdote = 'lalalalala';
+    }
     // indice n°22
-    if ($indice_id == "vd6k6CLB4G2NwC") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "vd6k6CLB4G2NwC") { 
+      $numero_indice=22;
+      $anecdote = 'lalalalala';
+    }
     // indice n°23
-    if ($indice_id == "BPi2Tg2uFWqyuD") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "BPi2Tg2uFWqyuD") { 
+      $numero_indice=23;
+      $anecdote = 'lalalalala';
+    }
     // indice n°24
-    if ($indice_id == "o54CJ4rMyVftbE") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "o54CJ4rMyVftbE") { 
+      $numero_indice=24;
+      $anecdote = 'lalalalala';
+    }
     // indice n°25
-    if ($indice_id == "u6ktLfJ3AU9RYD") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "u6ktLfJ3AU9RYD") { 
+      $numero_indice=25;
+      $anecdote = 'lalalalala';
+    }
     // indice n°26
-    if ($indice_id == "9heHYNZC762tBh") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "9heHYNZC762tBh") { 
+      $numero_indice=26;
+      $anecdote = 'lalalalala';
+    }
     // indice n°27
-    if ($indice_id == "ZNLLQezUcQg6b3") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "ZNLLQezUcQg6b3") { 
+      $numero_indice=27;
+      $anecdote = 'lalalalala';
+    }
     // indice n°28
-    if ($indice_id == "JHgiU2uiQvhP8g") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "JHgiU2uiQvhP8g") { 
+      $numero_indice=28;
+      $anecdote = 'lalalalala';
+    }
     // indice n°29
-    if ($indice_id == "uhj7UpjvdG8fyM") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "uhj7UpjvdG8fyM") { 
+      $numero_indice=29;
+      $anecdote = 'lalalalala';
+    }
     // indice n°30
-    if ($indice_id == "SBuR98KQCQwaZ2") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "SBuR98KQCQwaZ2") { 
+      $numero_indice=30;
+      $anecdote = 'lalalalala';
+    }
     
 
     // piège 1
-    if ($indice_id == "MXhiUDdRPy65h7") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "MXhiUDdRPy65h7") { 
+      $numero_indice="piege";
+      $anecdote = 'Vous venez de scanner un QRCode qui n\'est pas sur la carte. Vous devez donc re-scanner le QRCode n°';
+    }
     // piège 2
-    if ($indice_id == "rYF9Nr3wKHCead") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "rYF9Nr3wKHCead") { 
+      $numero_indice="piege";
+      $anecdote = 'Vous venez de scanner un QRCode qui n\'est pas sur la carte. Vous devez donc re-scanner le QRCode n°';
+    }
+
 
     // stand 1
-    if ($indice_id == "RAR4xEWfvU6iVJ") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "RAR4xEWfvU6iVJ") { 
+      $numero_indice="stand B";
+      $anecdote = 'Stand B validé. Vous pouvez continuer à chercher les indices sur votre carte.';
+    }
     // stand 2
-    if ($indice_id == "5Mtvpwb9HGHT2h") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "5Mtvpwb9HGHT2h") { 
+      $numero_indice="stand K";
+      $anecdote = 'Stand K validé. Vous pouvez continuer à chercher les indices sur votre carte.';
+    }
     // stand 3
-    if ($indice_id == "hAoKC7wQjihYP2") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "hAoKC7wQjihYP2") { 
+      $numero_indice="stand M";
+      $anecdote = 'Stand M validé. Vous pouvez continuer à chercher les indices sur votre carte.';
+    }
     // stand 4
-    if ($indice_id == "MNGM3Fa9SYf42h") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "MNGM3Fa9SYf42h") { 
+      $numero_indice="stand V";
+      $anecdote = 'Stand V validé. Vous pouvez continuer à chercher les indices sur votre carte.';
+    }
     // stand 5
-    if ($indice_id == "B5UdgrWx4a8SiM") { echo "<h1>Indice 1</h1>";}
+    if ($indice_id == "B5UdgrWx4a8SiM") { 
+      $numero_indice="stand T";
+      $anecdote = 'Stand T validé. Vous pouvez continuer à chercher les indices sur votre carte.';
+    }
+    return array( "numero_indice" => $numero_indice, "anecdote" => $anecdote,);
 } else{
     // page indice sans ?id
     //echo "<h1>Vous êtes sur la page Indice, des QrCodes sont cachés un peu partout dans l'IUT (pas d'id selectionné)</h1>";
