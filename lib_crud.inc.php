@@ -321,4 +321,4 @@ function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
     echo '<p>Erreur : ' . $e->getMessage() . '</p>';
     die();
 }
-} 
+}
