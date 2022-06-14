@@ -123,7 +123,6 @@ function ajout_equipe($mabd, $ekip_name, $date)
 {
   $req = 'INSERT INTO db_adventure (nom_equipe, heure_debut)
   VALUES("'.$ekip_name.'", "'.$date.'")';
-    echo '<p>' . $req . '</p>' . "\n";
     try {
       $resultat = $mabd->query($req);
   } catch (PDOException $e) {
