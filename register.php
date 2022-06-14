@@ -9,7 +9,7 @@
             $ekip_name = $_POST['ekip_name'];
             $date = date("H:i:s");
             $mabd = connexion_mmi_adventure();
-
+            doublon();
             ajout_equipe($mabd, $ekip_name, $date);
             deconnexion_mmi_adventure($mabd);
 
