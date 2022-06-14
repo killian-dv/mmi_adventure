@@ -283,7 +283,7 @@ function ajout_equipe($mabd, $ekip_name, $date) {
 
 
 function recup_id_ekip($mabd, $ekip_name) {
-  $req = 'SELECT equipe_id FROM db_adventure WHERE nom_equipe ='  .$ekip_name . '';
+  $req = 'SELECT equipe_id FROM db_adventure WHERE nom_equipe ="'.$ekip_name.'"';
   echo $req;
   try {
       $resultat = $mabd->query($req);
@@ -297,5 +297,5 @@ function recup_id_ekip($mabd, $ekip_name) {
 }
 
 function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
-  $req = "UPDATE db_adventure SET $id_qr_code = TRUE WHERE equipe_id ='.$ekip_id.'";
+  $req = 'UPDATE db_adventure SET $id_qr_code = TRUE WHERE equipe_id ="'.$ekip_id.'"';
 }
