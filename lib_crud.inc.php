@@ -294,11 +294,7 @@ function recup_id_ekip($mabd, $ekip_name) {
   }
   foreach ($resultat as $value) {
     echo $value['equipe_id']; 
-<<<<<<< HEAD
 } 
-=======
-  }
->>>>>>> fc061c0b85a5e63cc57c1e8b4dc3200d489322d8
 }
 
 function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
