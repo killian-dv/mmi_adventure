@@ -13,11 +13,13 @@
             //echo "<h1>Vous êtes sur la page Indice, des QrCodes sont cachés un peu partout dans l'IUT (pas d'id selectionné)</h1>";
         }
     ?>
-    <h1 class="title_numéro_indice">Indice n°01</h1>
+    <h1 class="title_numero_indice">Indice n°01</h1>
+
+    <div class="paragraphe">
     <h1>Anecdote</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse dolores ab eaque aut accusantium optio, laudantium nostrum similique minima possimus.</p>
-
-    <p>Total des indices trouvés : XX sur XX</p>
+    </div>
+    <p class="total_indice">Total des indices trouvés : XX sur XX</p>
     </section>
     <?php require('inc/footer.php'); ?>
 </body>
