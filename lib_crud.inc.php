@@ -244,19 +244,20 @@ function ajout_equipe($mabd, $ekip_name, $date) {
   }
 }
 
+
 function recup_id_ekip($mabd, $ekip_name) {
   $req = 'SELECT equipe_id FROM db_adventure WHERE nom_equipe ='  .$ekip_name . '';
-  
-    try {
+  try {
       $resultat = $mabd->query($req);
   } catch (PDOException $e) {
       // s'il y a une erreur, on l'affiche
       echo '<p>Erreur : ' . $e->getMessage() . '</p>';
       die();
   }
+  // pour chaque auteur, on met son nom et prénom dans une balise <option>
   foreach ($resultat as $value) {
-    echo $value['equipe_id']; 
-} 
+      echo $value['equipe_id']; 
+  } 
 }
 
 // function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
