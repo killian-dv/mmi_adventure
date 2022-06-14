@@ -284,7 +284,6 @@ function ajout_equipe($mabd, $ekip_name, $date) {
 
 function recup_id_ekip($mabd, $ekip_name) {
   $req = 'SELECT equipe_id FROM db_adventure WHERE nom_equipe ="'.$ekip_name.'"';
-  echo $req;
   try {
       $resultat = $mabd->query($req);
   } catch (PDOException $e) {
@@ -295,6 +294,15 @@ function recup_id_ekip($mabd, $ekip_name) {
   foreach ($resultat as $value) {
     echo $value['equipe_id']; 
 } 
+}
+
+function doublon(){
+  $doublon = mysqli_query('SELECT nom_equipe FROM db_adventure WHERE nom_equipe ="'.$doublon.'"');
+  $verdict = mysqli_fetch_array($doublon, MYSQL_ASSOC);
+  if ($doublon == $verdict['produitsNom'])
+  { echo "Ce produit existe déjà dans la base de données<br>";
+  exit;
+  }
 }
 
 function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
