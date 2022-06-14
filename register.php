@@ -1,3 +1,4 @@
+    <?php setcookie('id_ekip', '', time()+60*60*24*10, '/'); ?>
     <?php require('inc/debut_html.php'); ?>
     <title>MMI Adventure - Inscription</title>
     <section class="background">
@@ -9,13 +10,12 @@
             $date = date("H:i:s");
             $mabd = connexion_mmi_adventure();
             ajout_equipe($mabd, $ekip_name, $date);
-            recup_id_ekip($mabd, $ekip_name);
             deconnexion_mmi_adventure($mabd);
-            
 
-            //setcookie('id_ekip', recup_id_ekip($mabd, $ekip_name), time()+60*60*24*10, '/');
+            setcookie('id_ekip', recup_id_ekip($mabd, $ekip_name), time()+60*60*24*10, '/');
 
             echo '<div class="quit_page"><p>Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p></div>';
+            echo $_COOKIE["id_ekip"];
         } else{ 
             echo'
             <h1 class="m17">Inscription</h1>
