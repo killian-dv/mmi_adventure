@@ -232,8 +232,7 @@ function recup_id_indice($indice_id) {
 }
 
 // Ajouter le nom de l'équipe et l'heure de départ dans la BDD
-function ajout_equipe($mabd, $ekip_name, $date)
-{
+function ajout_equipe($mabd, $ekip_name, $date) {
   $req = 'INSERT INTO db_adventure (nom_equipe, heure_debut)
   VALUES("'.$ekip_name.'", "'.$date.'")';
     try {
@@ -243,4 +242,19 @@ function ajout_equipe($mabd, $ekip_name, $date)
       echo '<p>Erreur : ' . $e->getMessage() . '</p>';
       die();
   }
+}
+
+function recup_id_ekip($mabd, $ekip_name) {
+  $req = "SELECT * FROM european_ski_resort WHERE resort_id ="  .$idResort . '';
+    try {
+      $resultat = $mabd->query($req);
+  } catch (PDOException $e) {
+      // s'il y a une erreur, on l'affiche
+      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+      die();
+  }
+}
+
+function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
+
 }
