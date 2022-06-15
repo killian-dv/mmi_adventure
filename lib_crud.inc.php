@@ -324,19 +324,15 @@ function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
 }
 
 function verif_indice($mabd, $ekip_id, $id_qr_code){
-  $sql = 'SELECT * FROM db_adventure';
-  if $tab_info["indice"]==Null{
-    $req = 'UPDATE db_adventure SET total_indice =+1';
-    $req2 = 'UPDATE db_adventure SET '.$id_qr_code.' = TRUE WHERE equipe_id ='.$ekip_id.'';
-    try {
-      $resultat = $mabd->query($req);
-      $resultat = $mabd->query($req2);
-    } catch (PDOException $e) {
+  $req = 'SELECT'. $id_qr_code. 'FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultat = $mabd->query($req);
+  } catch (PDOException $e) {
       // s'il y a une erreur, on l'affiche
       echo '<p>Erreur : ' . $e->getMessage() . '</p>';
       die();
-    }
-  } else {
-    echo 'Vous avez déjà scannez ce QR Code';
   }
+  // la fonction retourne le tableau associatif 
+  // contenant les champs et leurs valeurs
+  return $resultat->fetch();
 }
