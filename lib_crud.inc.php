@@ -322,3 +322,20 @@ function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
     die();
 }
 }
+
+function verif_indice(){
+  $sql = 'SELECT * FROM db_adventure';
+  if $tab_info["anecdote"]==Null{
+    $req = 'UPDATE db_adventure SET total_indice =+1';
+    $req = 'UPDATE db_adventure SET '.$id_qr_code.' = TRUE WHERE equipe_id ='.$ekip_id.'';
+    try {
+      $resultat = $mabd->query($req);
+    } catch (PDOException $e) {
+      // s'il y a une erreur, on l'affiche
+      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+      die();
+    }
+  } else {
+    echo 'Vous avez déjà scannez ce QR Code';
+  }
+}
