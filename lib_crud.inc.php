@@ -310,7 +310,7 @@ function doublon($mabd, $ekip_name){
       return true;
     }
     else {
-      return false
+      return false;
     }
   }
 }
