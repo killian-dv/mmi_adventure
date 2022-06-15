@@ -22,7 +22,6 @@
             echo '<h1 class="title_numero_indice">' .$tab_info["numero_indice"].'</h1>';
         }
         gagnant($mabd, $_COOKIE['id_ekip']);
-
     }
     else {
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
