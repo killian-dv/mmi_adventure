@@ -420,8 +420,8 @@ function temps_total($mabd, $ekip_id){
   // la fonction retourne le tableau associatif 
   // contenant les champs et leurs valeurs
   foreach($resultat as $value){
-    $a = $value['heure_debut'];
-    $b = $value['heure_fin'];
-    echo $b.' ok '.$a;
+    $a = strtotime("$value['heure_debut']");
+    $b = strtotime("$value['heure_fin']");
+    echo date('H:i:s',$b-$a);
   }
 }
