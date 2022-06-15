@@ -409,7 +409,7 @@ function date_fin($mabd, $ekip_id, $date_fin) {
 }
 
 function temps_total($mabd, $ekip_id){
-  $req = 'SELECT heure_debut FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
+  $req = 'SELECT heure_debut, heure_fin FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
   try {
     $resultat = $mabd->query($req);
   } catch (PDOException $e) {
@@ -421,5 +421,6 @@ function temps_total($mabd, $ekip_id){
   // contenant les champs et leurs valeurs
   foreach($resultat as $value){
     echo $value['heure_debut'];
+    echo $value['heure_fin'];
   }
 }
