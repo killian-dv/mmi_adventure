@@ -397,7 +397,7 @@ $req = 'SELECT total_indice FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
   }
 }
 
-function date_fin($mabd, $ekip_id, $date_fin) {
+function date_fin($mabd, $date_fin, $ekip_id) {
   $req = 'UPDATE db_adventure SET heure_fin = '.$date_fin.' WHERE equipe_id ='.$ekip_id.'';
   try {
     $resultat = $mabd->query($req);
