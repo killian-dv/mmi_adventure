@@ -7,8 +7,7 @@
   require 'secretxyz123.php';
 
 // connexion à la base de données
-function connexion_mmi_adventure()
-{
+function connexion_mmi_adventure(){
     // on initialise la variable de connexion à null
     $mabd = null;
     try {

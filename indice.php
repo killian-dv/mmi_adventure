@@ -13,7 +13,14 @@
         ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
     }
     else {
-        echo 'Tu as déja scanné';
+        echo '<p style=text-align:center;>Tu as déja scanné</p>';
+    ?> <style>
+            .paragraphe
+            {
+                display: none;
+            }
+        </style>
+    <?php
     }
     
     deconnexion_mmi_adventure($mabd);
