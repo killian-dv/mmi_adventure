@@ -338,10 +338,5 @@ function verif_indice($mabd, $ekip_id, $id_qr_code){
   }
   // la fonction retourne le tableau associatif 
   // contenant les champs et leurs valeurs
-  if ($resultat==NULL || $resultat==0) {
-    return false;
-  }
-  if ($resultat==1){
-    return true;
-  }
+  echo $req;
 }
