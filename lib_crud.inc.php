@@ -328,7 +328,7 @@ function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
 }
 
 function verif_indice($mabd, $ekip_id, $id_qr_code){
-  $req = 'SELECT'. $id_qr_code. 'FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
+  $req = 'SELECT '.$id_qr_code.' FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
   echo $req;
   try {
     $resultat = $mabd->query($req);
@@ -339,4 +339,10 @@ function verif_indice($mabd, $ekip_id, $id_qr_code){
   }
   // la fonction retourne le tableau associatif 
   // contenant les champs et leurs valeurs
+  if ($resultat==NULL || $resultat==0) {
+    return false;
+  }
+  if ($resultat==1){
+    return true;
+  }
 }
