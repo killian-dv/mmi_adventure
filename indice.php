@@ -7,6 +7,7 @@
     <section class="background">
     <?php require('inc/header.php'); ?>
     <?php $indice_id=$_GET['id'];
+    $date_fin = date("H:i:s");
     $tab_info = recup_id_indice($indice_id);
     $mabd = connexion_mmi_adventure();
     if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==false){
