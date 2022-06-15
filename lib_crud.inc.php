@@ -306,7 +306,7 @@ function doublon($mabd, $ekip_name){
     die();
 }
   foreach($resultat as $value){
-    if ($value ['nom_equipe']==$ekip_name){
+    if ($value['nom_equipe']==$ekip_name){
       return true;
     }
     else {
