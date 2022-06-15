@@ -397,18 +397,6 @@ $req = 'SELECT total_indice FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
   }
 }
 
-// Ajouter la date de fin dans la BDD
-function date_fin($mabd, $ekip_id, $date_fin) {
-  $req = 'UPDATE total_indice FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
-    try {
-      $resultat = $mabd->query($req);
-  } catch (PDOException $e) {
-      // s'il y a une erreur, on l'affiche
-      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
-      die();
-  }
-}
-
 
 function date_fin($mabd, $ekip_id, $id_qr_code) {
   $req = 'UPDATE db_adventure SET heure_fin = '.$date_fin.' WHERE equipe_id ='.$ekip_id.'';
