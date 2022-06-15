@@ -15,6 +15,7 @@ function connexion_mmi_adventure()
     // on essaie de se connecter
     // le port et le dbname ci-dessous sont À ADAPTER à vos données
     $mabd = new PDO('mysql:host=localhost;dbname=mmi_adventure;charset=UTF8;', LUTILISATEUR, LEMOTDEPASSE);
+     
     // on passe le codage en utf-8
     $mabd->query('SET NAMES utf8;');
     } catch (PDOException $e) {
@@ -272,6 +273,7 @@ function recup_id_indice($indice_id) {
 function ajout_equipe($mabd, $ekip_name, $date) {
   $req = 'INSERT INTO db_adventure (nom_equipe, heure_debut)
   VALUES("'.$ekip_name.'", "'.$date.'")';
+  echo "*** ".$req." ***";
     try {
       $resultat = $mabd->query($req);
   } catch (PDOException $e) {
