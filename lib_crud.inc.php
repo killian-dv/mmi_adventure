@@ -14,6 +14,7 @@ function connexion_mmi_adventure(){
     // on essaie de se connecter
     // le port et le dbname ci-dessous sont À ADAPTER à vos données
     $mabd = new PDO('mysql:host=localhost;dbname=mmi_adventure;charset=UTF8;', LUTILISATEUR, LEMOTDEPASSE);
+     
     // on passe le codage en utf-8
     $mabd->query('SET NAMES utf8;');
     } catch (PDOException $e) {
@@ -326,7 +327,7 @@ function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
 }
 
 function verif_indice($mabd, $ekip_id, $id_qr_code){
-  $req = 'SELECT'. $id_qr_code. 'FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
+  $req = 'SELECT '.$id_qr_code.' FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
   try {
     $resultat = $mabd->query($req);
   } catch (PDOException $e) {
@@ -336,10 +337,9 @@ function verif_indice($mabd, $ekip_id, $id_qr_code){
   }
   // la fonction retourne le tableau associatif 
   // contenant les champs et leurs valeurs
-  if ($resultat==NULL || $resultat==0) {
+  if ($resultat=='NULL' || $resultat=='0') {
     return false;
-  }
-  if ($resultat==1){
+  } else {
     return true;
   }
 }

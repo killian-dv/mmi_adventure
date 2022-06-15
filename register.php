@@ -12,9 +12,7 @@
             $ekip_name = $_POST['ekip_name'];
             $date = date("H:i:s");
             $mabd = connexion_mmi_adventure();
-            var_dump($mabd);
             if (doublon($mabd, $ekip_name)==false){
-                echo doublon($mabd, $ekip_name);
                 ajout_equipe($mabd, $ekip_name, $date);
                 setcookie("id_ekip", recup_id_ekip($mabd, $ekip_name), time()+60*60*24*10, '/');
                 echo '<div class="quit_page"><p>Vous pouvez quitter cette page et préparer votre appareil photo !</br></br>Bonne chance '.$ekip_name.' !</p></div>';
