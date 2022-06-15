@@ -323,7 +323,7 @@ function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
 }
 }
 
-function verif_indice(){
+function verif_indice($mabd, $ekip_id, $id_qr_code){
   $sql = 'SELECT * FROM db_adventure';
   if $tab_info["indice"]==Null{
     $req = 'UPDATE db_adventure SET total_indice =+1';
