@@ -11,8 +11,9 @@
     $mabd = connexion_mmi_adventure();
     if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==false){
         ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
-    }
-    else {
+    } 
+
+    if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==true){
         echo 'Tu as déja scanné';
     }
     
