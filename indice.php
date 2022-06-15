@@ -25,7 +25,7 @@
             date_fin($mabd, $_COOKIE['id_ekip'], $date_fin);
         }
         calcul_temps($mabd, $_COOKIE['id_ekip']);
-        temps_total($mabd, $ekip_id, $temps_total);
+        temps_total($mabd, $_COOKIE['id_ekip'], $temps_total);
     }
     else {
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
