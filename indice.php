@@ -24,7 +24,7 @@
             echo '<h1 class="title_numero_indice">' .$tab_info["numero_indice"].'</h1>';
             date_fin($mabd, $_COOKIE['id_ekip'], $date_fin);
         }
-        calcul_temps($mabd, $_COOKIE['id_ekip']);
+        calcul_temps($mabd, $_COOKIE['id_ekip'], $temps_total);
         temps_total($mabd, $_COOKIE['id_ekip'], $temps_total);
     }
     else {
