@@ -12,6 +12,7 @@
             $ekip_name = $_POST['ekip_name'];
             $date = date("H:i:s");
             $mabd = connexion_mmi_adventure();
+            var_dump($mabd);
             if (doublon($mabd, $ekip_name)==false){
                 echo doublon($mabd, $ekip_name);
                 ajout_equipe($mabd, $ekip_name, $date);
