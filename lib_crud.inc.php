@@ -378,3 +378,21 @@ function recup_compteur($mabd, $ekip_id){
     return $value['total_indice'];
   }
 }
+
+function gagnant($mabd, $ekip_id){
+$req = 'SELECT total_indice FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultat = $mabd->query($req);
+  } catch (PDOException $e) {
+      // s'il y a une erreur, on l'affiche
+      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+      die();
+  }
+  // la fonction retourne le tableau associatif 
+  // contenant les champs et leurs valeurs
+  foreach($resultat as $value){
+    if ($value['total_indice']==35){
+      return 'Vous avez réussi à trouver les 35 indices, rendez vous dans l\'amphithéatre (en H018)';
+    }
+  }
+}
