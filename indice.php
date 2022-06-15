@@ -21,7 +21,6 @@
         if ($tab_info["numero_indice"] == "stand B" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand M" or $tab_info["numero_indice"] =="stand V" or $tab_info["numero_indice"] =="stand T") {
             echo '<h1 class="title_numero_indice">' .$tab_info["numero_indice"].'</h1>';
         }
-        gagnant($mabd, $_COOKIE['id_ekip']);
     }
     else {
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
@@ -42,6 +41,7 @@
         </style>
     <?php
     }
+    gagnant($mabd, $_COOKIE['id_ekip']);
         //function afficher qr code à faire
     deconnexion_mmi_adventure($mabd);
     ?>
