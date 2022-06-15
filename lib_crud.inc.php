@@ -329,7 +329,6 @@ function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
 
 function verif_indice($mabd, $ekip_id, $id_qr_code){
   $req = 'SELECT '.$id_qr_code.' FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
-  echo $req;
   try {
     $resultat = $mabd->query($req);
   } catch (PDOException $e) {
