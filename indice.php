@@ -11,6 +11,7 @@
     $mabd = connexion_mmi_adventure();
     if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==false){
         ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
+        compteur($mabd, $_COOKIE['id_ekip']);
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
             echo '<h1 class="title_numero_indice">Indice n°'.$tab_info["numero_indice"].'</h1>';
         }
@@ -20,6 +21,7 @@
         if ($tab_info["numero_indice"] == "stand B" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand M" or $tab_info["numero_indice"] =="stand V" or $tab_info["numero_indice"] =="stand T") {
             echo '<h1 class="title_numero_indice">' .$tab_info["numero_indice"].'</h1>';
         }
+
     }
     else {
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
@@ -40,7 +42,7 @@
         </style>
     <?php
     }
-    
+        //function afficher qr code à faire
     deconnexion_mmi_adventure($mabd);
     ?>
 
@@ -60,7 +62,11 @@
     }
     ?>
     </div>
-    <p class="total_indice">Total des indices trouvés : XX sur XX</p>
+    <?php 
+    $mabd = connexion_mmi_adventure();
+    echo '<p class="total_indice">Total des indices trouvés : '.recup_compteur($mabd, $_COOKIE['id_ekip']). ' sur XX</p>';
+    deconnexion_mmi_adventure($mabd);
+    ?>
     </section>
     <?php require('inc/footer.php'); ?>
 </body>

@@ -337,9 +337,39 @@ function verif_indice($mabd, $ekip_id, $id_qr_code){
   }
   // la fonction retourne le tableau associatif 
   // contenant les champs et leurs valeurs
-  if ($resultat=='NULL' || $resultat=='0') {
-    return false;
-  } else {
-    return true;
+  foreach($resultat as $value){
+    if ($value[$id_qr_code]==NULL || $value[$id_qr_code]==0){
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+}
+
+function compteur($mabd, $ekip_id){
+  $req = 'UPDATE db_adventure SET total_indice= total_indice + 1 WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultat = $mabd->query($req);
+  } catch (PDOException $e) {
+      // s'il y a une erreur, on l'affiche
+      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+      die();
+  }
+}
+
+function recup_compteur($mabd, $ekip_id){
+  $req = 'SELECT total_indice FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultat = $mabd->query($req);
+  } catch (PDOException $e) {
+      // s'il y a une erreur, on l'affiche
+      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+      die();
+  }
+  // la fonction retourne le tableau associatif 
+  // contenant les champs et leurs valeurs
+  foreach($resultat as $value){
+    return $value['total_indice'];
   }
 }
