@@ -423,6 +423,7 @@ function temps_total($mabd, $ekip_id){
     $a = strtotime($value['heure_debut']);
     $b = strtotime($value['heure_fin']);
     
-    echo $b-$a;
+    echo date('H:i:s',$b-$a);
+    echo $a.' - '.$b;
   }
 }
