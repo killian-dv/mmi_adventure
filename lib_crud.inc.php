@@ -347,8 +347,13 @@ function verif_indice($mabd, $ekip_id, $id_qr_code){
   }
 }
 
-function compteur($mabd, $ekip_id){
-  $req = 'UPDATE db_adventure SET total_indice= total_indice + 1 WHERE equipe_id ='.$ekip_id.'';
+function compteur($mabd, $ekip_id, $type_qrcode){
+  if ($type_qrcode=='piege_1' or $type_qrcode=='piege_2') {
+    $req = 'UPDATE db_adventure SET total_indice= total_indice - 1 WHERE equipe_id ='.$ekip_id.'';
+  }
+  else {
+    $req = 'UPDATE db_adventure SET total_indice= total_indice + 1 WHERE equipe_id ='.$ekip_id.'';
+  }
   try {
     $resultat = $mabd->query($req);
   } catch (PDOException $e) {

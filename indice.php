@@ -11,7 +11,7 @@
     $mabd = connexion_mmi_adventure();
     if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==false){
         ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
-        compteur($mabd, $_COOKIE['id_ekip']);
+        compteur($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
             echo '<h1 class="title_numero_indice">Indice n°'.$tab_info["numero_indice"].'</h1>';
         }
@@ -64,7 +64,7 @@
     </div>
     <?php 
     $mabd = connexion_mmi_adventure();
-    echo '<p class="total_indice">Total des indices trouvés : '.recup_compteur($mabd, $_COOKIE['id_ekip']). ' sur XX</p>';
+    echo '<p class="total_indice">Total des indices trouvés : '.recup_compteur($mabd, $_COOKIE['id_ekip']). ' sur 35</p>';
     deconnexion_mmi_adventure($mabd);
     ?>
     </section>
