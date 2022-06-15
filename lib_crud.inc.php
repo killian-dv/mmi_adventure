@@ -408,7 +408,7 @@ function date_fin($mabd, $ekip_id, $date_fin) {
 }
 }
 
-function temps_total($mabd, $ekip_id){
+function calcul_temps($mabd, $ekip_id){
   $req = 'SELECT heure_debut, heure_fin FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
   try {
     $resultat = $mabd->query($req);
@@ -422,7 +422,18 @@ function temps_total($mabd, $ekip_id){
   foreach($resultat as $value){
     $a = strtotime($value['heure_debut']);
     $b = strtotime($value['heure_fin']);
-    
-    echo gmdate('H:i:s',$b-$a);
+    $temps_total = gmdate('H:i:s',$b-$a);
+    return $temps_total;
   }
+}
+
+function temps_total($mabd, $ekip_id, $temps_total) {
+  $req = 'UPDATE db_adventure SET temps_total = "'.$temps_total.'" WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultat = $mabd->query($req);
+} catch (PDOException $e) {
+    // s'il y a une erreur, on l'affiche
+    echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+    die();
+}
 }
