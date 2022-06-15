@@ -325,11 +325,12 @@ function ajout_qrcode_bdd($mabd, $ekip_id, $id_qr_code) {
 
 function verif_indice(){
   $sql = 'SELECT * FROM db_adventure';
-  if $tab_info["anecdote"]==Null{
+  if $tab_info["indice"]==Null{
     $req = 'UPDATE db_adventure SET total_indice =+1';
-    $req = 'UPDATE db_adventure SET '.$id_qr_code.' = TRUE WHERE equipe_id ='.$ekip_id.'';
+    $req2 = 'UPDATE db_adventure SET '.$id_qr_code.' = TRUE WHERE equipe_id ='.$ekip_id.'';
     try {
       $resultat = $mabd->query($req);
+      $resultat = $mabd->query($req2);
     } catch (PDOException $e) {
       // s'il y a une erreur, on l'affiche
       echo '<p>Erreur : ' . $e->getMessage() . '</p>';
