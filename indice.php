@@ -13,7 +13,7 @@
     if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==false){
         ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
         compteur($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
-        date_fin($mabd, $ekip_id, $id_qr_code);
+        date_fin($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
             echo '<h1 class="title_numero_indice">Indice n°'.$tab_info["numero_indice"].'</h1>';
         }
