@@ -9,7 +9,13 @@
     <?php $indice_id=$_GET['id'];
     $tab_info = recup_id_indice($indice_id);
     $mabd = connexion_mmi_adventure();
-    ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
+    if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==false){
+        ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
+    }
+    else {
+        echo 'Tu as déja scanné';
+    }
+    
     deconnexion_mmi_adventure($mabd);
     ?>
     <?php
