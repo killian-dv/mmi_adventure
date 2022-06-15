@@ -23,7 +23,7 @@
         if ($tab_info["numero_indice"] == "stand B" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand M" or $tab_info["numero_indice"] =="stand V" or $tab_info["numero_indice"] =="stand T") {
             echo '<h1 class="title_numero_indice">' .$tab_info["numero_indice"].'</h1>';
             date_fin($mabd, $_COOKIE['id_ekip'], $date_fin);
-        }temps_total($mabd, $ekip_id, $temps_total);
+        }temps_total($mabd, $_COOKIE['id_ekip'], $tab_info["heure_debut"], $tab_info["heure_fin"]);
     }
     else {
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
