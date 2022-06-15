@@ -423,7 +423,7 @@ function calcul_temps($mabd, $ekip_id){
     $a = strtotime($value['heure_debut']);
     $b = strtotime($value['heure_fin']);
     $temps_total = gmdate('H:i:s',$b-$a);
-    echo $temps_total;
+    return $temps_total;
   }
 }
 
