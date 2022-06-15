@@ -392,7 +392,7 @@ $req = 'SELECT total_indice FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
   // contenant les champs et leurs valeurs
   foreach($resultat as $value){
     if ($value['total_indice']==35){
-      return 'Vous avez réussi à trouver les 35 indices, rendez vous dans l\'amphithéatre (en H018)';
+      echo 'Vous avez réussi à trouver les 35 indices, rendez vous dans l\'amphithéatre (en H018).';
     }
   }
 }
