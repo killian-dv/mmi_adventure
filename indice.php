@@ -11,14 +11,7 @@
     $tab_info = recup_id_indice($indice_id);
     $mabd = connexion_mmi_adventure();
     if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==false){
-        $total_indice = recup_compteur($mabd, $_COOKIE['id_ekip']);
-        if (($total_indice==5 and ($tab_info["bdd_indice"]=='stand_1' or $tab_info["bdd_indice"]=='stand_2' or $tab_info["bdd_indice"]=='stand_3' or $tab_info["bdd_indice"]=='stand_4' or $tab_info["bdd_indice"]=='stand_5'))
-        ($total_indice==11 and ($tab_info["bdd_indice"]=='stand_1' or $tab_info["bdd_indice"]=='stand_2' or $tab_info["bdd_indice"]=='stand_3' or $tab_info["bdd_indice"]=='stand_4' or $tab_info["bdd_indice"]=='stand_5')) 
-        ($total_indice==17 and ($tab_info["bdd_indice"]=='stand_1' or $tab_info["bdd_indice"]=='stand_2' or $tab_info["bdd_indice"]=='stand_3' or $tab_info["bdd_indice"]=='stand_4' or $tab_info["bdd_indice"]=='stand_5'))
-        ($total_indice==23 and ($tab_info["bdd_indice"]=='stand_1' or $tab_info["bdd_indice"]=='stand_2' or $tab_info["bdd_indice"]=='stand_3' or $tab_info["bdd_indice"]=='stand_4' or $tab_info["bdd_indice"]=='stand_5'))
-        ($total_indice==29 and ($tab_info["bdd_indice"]=='stand_1' or $tab_info["bdd_indice"]=='stand_2' or $tab_info["bdd_indice"]=='stand_3' or $tab_info["bdd_indice"]=='stand_4' or $tab_info["bdd_indice"]=='stand_5'))) {
-            goto end;
-        }
+        
         ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
         compteur($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
   
@@ -70,6 +63,9 @@
     if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
         echo '<h1>Anecdote</h1>';
         echo '<p>'.$tab_info["anecdote"].'</p>';
+        $mabd = connexion_mmi_adventure();
+        $total_indice = recup_compteur($mabd, $_COOKIE['id_ekip']);
+        deconnexion_mmi_adventure($mabd);
         if ($total_indice==5 or $total_indice==11 or $total_indice==17 or $total_indice==23 or $total_indice==29) {
             echo '<p>Vous devez vous rendre au stand '.$numero_stand .' (c\'est obligatoire sinon tu ne peux pas continuer l\'aventure).';
         }
@@ -80,8 +76,6 @@
     if ($tab_info["numero_indice"] == "stand B" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand M" or $tab_info["numero_indice"] =="stand V" or $tab_info["numero_indice"] =="stand T") {
         echo '<p>'.$tab_info["anecdote"].'</p>';
     }
-    end: 
-    echo 'Vous devez allez au stand avant de continuer';
     ?>
     </div>
     <?php 
