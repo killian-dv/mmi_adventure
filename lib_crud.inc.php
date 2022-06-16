@@ -397,16 +397,35 @@ $req = 'SELECT total_indice FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
   }
 }
 
+<<<<<<< HEAD
 function desactivation_indice($mabd, $ekip_id) {
   $req = 'SELECT indice_1, indice_2, indice_3, indice_4, indice_5, indice_6, indice_7, indice_8, indice_9, indice_10, indice_11, indice_12, indice_13, indice_14, indice_15, indice_16, indice_17, indice_18, indice_19, indice_20, indice_21, indice_22, indice_23, indice_24, indice_25, indice_26, indice_27, indice_28, indice_29, indice_30 
   FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
   try {
     $resultats = $mabd->query($req);
+=======
+function date_fin($mabd, $ekip_id, $date_fin) {
+  $req = 'UPDATE db_adventure SET heure_fin = "'.$date_fin.'" WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultat = $mabd->query($req);
+} catch (PDOException $e) {
+    // s'il y a une erreur, on l'affiche
+    echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+    die();
+}
+}
+
+function calcul_temps($mabd, $ekip_id){
+  $req = 'SELECT heure_debut, heure_fin FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultat = $mabd->query($req);
+>>>>>>> bd01fb64fc01e75e224a30c74aea775003213b72
   } catch (PDOException $e) {
       // s'il y a une erreur, on l'affiche
       echo '<p>Erreur : ' . $e->getMessage() . '</p>';
       die();
   }
+<<<<<<< HEAD
 
   $resultat = $resultats->fetch(PDO::FETCH_ASSOC);
 
@@ -431,3 +450,25 @@ $req2 = 'UPDATE db_adventure SET '.$indice_hasard.'= NULL WHERE equipe_id ='.$ek
   }
 return $indice_hasard;
 }
+=======
+  // la fonction retourne le tableau associatif 
+  // contenant les champs et leurs valeurs
+  foreach($resultat as $value){
+    $a = strtotime($value['heure_debut']);
+    $b = strtotime($value['heure_fin']);
+    $temps_total = gmdate('H:i:s',$b-$a);
+    return $temps_total;
+  }
+}
+
+function temps_total($mabd, $ekip_id, $temps_total) {
+  $req = 'UPDATE db_adventure SET temps_total = "'.$temps_total.'" WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultat = $mabd->query($req);
+} catch (PDOException $e) {
+    // s'il y a une erreur, on l'affiche
+    echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+    die();
+}
+}
+>>>>>>> bd01fb64fc01e75e224a30c74aea775003213b72

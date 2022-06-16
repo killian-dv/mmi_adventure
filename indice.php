@@ -7,6 +7,7 @@
     <section class="background">
     <?php require('inc/header.php'); ?>
     <?php $indice_id=$_GET['id'];
+    $date_fin = date("H:i:s");
     $tab_info = recup_id_indice($indice_id);
     $mabd = connexion_mmi_adventure();
     if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==false){
@@ -15,6 +16,7 @@
         
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
             echo '<h1 class="title_numero_indice">Indice n°'.$tab_info["numero_indice"].'</h1>';
+            date_fin($mabd, $_COOKIE['id_ekip'], $date_fin);
         }
         if ($tab_info["numero_indice"] == "piege") {
             echo '<h1 class="title_numero_indice"> QRCode piégé !</h1>';
@@ -23,8 +25,10 @@
         }
         if ($tab_info["numero_indice"] == "stand B" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand M" or $tab_info["numero_indice"] =="stand V" or $tab_info["numero_indice"] =="stand T") {
             echo '<h1 class="title_numero_indice">' .$tab_info["numero_indice"].'</h1>';
+            date_fin($mabd, $_COOKIE['id_ekip'], $date_fin);
         }
-        gagnant($mabd, $_COOKIE['id_ekip']);
+        $temps_total = calcul_temps($mabd, $_COOKIE['id_ekip']);
+        temps_total($mabd, $_COOKIE['id_ekip'], $temps_total);
     }
     else {
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
@@ -45,6 +49,7 @@
         </style>
     <?php
     }
+    gagnant($mabd, $_COOKIE['id_ekip']);
         //function afficher qr code à faire
     deconnexion_mmi_adventure($mabd);
     ?>
