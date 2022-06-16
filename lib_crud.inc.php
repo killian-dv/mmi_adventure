@@ -183,7 +183,7 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "u6ktLfJ3AU9RYD") { 
       $numero_indice=25;
       $bdd_indice="indice_25";
-      $anecdote = 'A l\'IUT il n\'y a pas que des étudiants qui viennent en voiture, certain viennetn';
+      $anecdote = 'À l\'IUT, il n\'y a pas que des étudiants qui viennent en voiture, certains viennent à vélo, voici un des garages à vélo ici.';
     }
     // indice n°26
     if ($indice_id == "9heHYNZC762tBh") { 
@@ -195,25 +195,25 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "ZNLLQezUcQg6b3") { 
       $numero_indice=27;
       $bdd_indice="indice_27";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Malin de votre part, celui là n\'étais pas simple, un conseil ne lachez rien durant votre formation, cela pourra vous paraître dûr mais il faut s’attacher !';
     }
     // indice n°28
     if ($indice_id == "JHgiU2uiQvhP8g") { 
       $numero_indice=28;
       $bdd_indice="indice_28";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Marre de polluer la planète avec votre voiture ou vous n\'avez pas seulement de permis ou de voiture ? Venez en vélo à l\'IUT.';
     }
     // indice n°29
     if ($indice_id == "uhj7UpjvdG8fyM") { 
       $numero_indice=29;
       $bdd_indice="indice_29";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Vous êtes de bon chercheur ! Continuez d\'explorer le reste du bâtiment et vous trouverez la totalité des QR codes.';
     }
     // indice n°30
     if ($indice_id == "SBuR98KQCQwaZ2") { 
       $numero_indice=30;
       $bdd_indice="indice_30";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Vous vous trouvez dans la meilleure salle du Bâtiment H selon nous, vous serez souvent en autonomie dans celle-ci, avec beaucoup de poste de travail disponible.';
     }
     
 
