@@ -61,7 +61,12 @@
     if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
         echo '<h1>Anecdote</h1>';
         echo '<p>'.$tab_info["anecdote"].'</p>';
-        echo '<p>Vous devez vous rendre au stand '.$numero_stand .' (c\'est obligatoire sinon tu ne peux pas continuer l\'aventure).';
+        $mabd = connexion_mmi_adventure();
+        $total_indice = recup_compteur($mabd, $_COOKIE['id_ekip']);
+        deconnexion_mmi_adventure($mabd);
+        if ($total_indice==6 or $total_indice==12 or $total_indice==18 or $total_indice==24 or $total_indice==30) {
+            echo '<p>Vous devez vous rendre au stand '.$numero_stand .' (c\'est obligatoire sinon tu ne peux pas continuer l\'aventure).';
+        }
     }
     if ($tab_info["numero_indice"] == "piege") {
         echo '<p>'.$tab_info["anecdote"]. ' ' .substr($numero_indice_perdu, -1).'</p>';

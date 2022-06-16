@@ -499,23 +499,22 @@ function test_stand($mabd, $ekip_id){
       foreach($resultat2 as $indice_number => $value2){
         if ($value2==NULL){
           $stand_no= array_merge($stand_no, [$indice_number => $value2]);
-
-    $stand_hasard = array_rand($stand_no, 1);
-    if ($stand_hasard=='stand_1'){
-      return 'B';
-    }
-    if ($stand_hasard=='stand_2'){
-      return 'K';
-    }
-    if ($stand_hasard=='stand_3'){
-      return 'M';
-    }
-    if ($stand_hasard=='stand_4'){
-      return 'V';
-    }
-    if ($stand_hasard=='stand_5'){
-      return 'T';
-    }
+          $stand_hasard = array_rand($stand_no, 1);
+          if ($stand_hasard=='stand_1'){
+            return 'B';
+          }
+          if ($stand_hasard=='stand_2'){
+            return 'K';
+          }
+          if ($stand_hasard=='stand_3'){
+            return 'M';
+          }
+          if ($stand_hasard=='stand_4'){
+            return 'V';
+          }
+          if ($stand_hasard=='stand_5'){
+            return 'T';
+          }
         }
     }
     }
