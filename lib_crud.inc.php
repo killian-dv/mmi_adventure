@@ -396,3 +396,38 @@ $req = 'SELECT total_indice FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
     }
   }
 }
+
+function desactivation_indice($mabd, $ekip_id) {
+  $req = 'SELECT indice_1, indice_2, indice_3, indice_4, indice_5, indice_6, indice_7, indice_8, indice_9, indice_10, indice_11, indice_12, indice_13, indice_14, indice_15, indice_16, indice_17, indice_18, indice_19, indice_20, indice_21, indice_22, indice_23, indice_24, indice_25, indice_26, indice_27, indice_28, indice_29, indice_30 
+  FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultats = $mabd->query($req);
+  } catch (PDOException $e) {
+      // s'il y a une erreur, on l'affiche
+      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+      die();
+  }
+
+  $resultat = $resultats->fetch(PDO::FETCH_ASSOC);
+
+  // la fonction retourne le tableau associatif 
+  // contenant les champs et leurs valeurs
+  $indice_trouve= array();
+  foreach($resultat as $indice_number => $value){
+    if ($value==1){
+      $indice_trouve= array_merge($indice_trouve, [$indice_number => $value]);
+    }
+}
+print_r($indice_trouve);
+$indice_hasard = array_rand($indice_trouve, 1);
+echo $indice_hasard;
+$req2 = 'UPDATE db_adventure SET '.$indice_hasard.'= NULL WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $insert = $mabd->query($req2);
+  } catch (PDOException $e) {
+      // s'il y a une erreur, on l'affiche
+      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+      die();
+  }
+return $indice_hasard;
+}

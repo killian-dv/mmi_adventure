@@ -12,11 +12,14 @@
     if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==false){
         ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
         compteur($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
+        
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
             echo '<h1 class="title_numero_indice">Indice n°'.$tab_info["numero_indice"].'</h1>';
         }
         if ($tab_info["numero_indice"] == "piege") {
             echo '<h1 class="title_numero_indice"> QRCode piégé !</h1>';
+            $numero_indice_perdu = desactivation_indice($mabd, $_COOKIE['id_ekip']);
+            echo substr($numero_indice_perdu, -1);
         }
         if ($tab_info["numero_indice"] == "stand B" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand M" or $tab_info["numero_indice"] =="stand V" or $tab_info["numero_indice"] =="stand T") {
             echo '<h1 class="title_numero_indice">' .$tab_info["numero_indice"].'</h1>';
@@ -55,7 +58,7 @@
         echo '<p>'.$tab_info["anecdote"].'</p>';
     }
     if ($tab_info["numero_indice"] == "piege") {
-        echo '<p>'.$tab_info["anecdote"].'</p>';
+        echo '<p>'.$tab_info["anecdote"]. ' ' .substr($numero_indice_perdu, -1).'</p>';
     }
     if ($tab_info["numero_indice"] == "stand B" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand M" or $tab_info["numero_indice"] =="stand V" or $tab_info["numero_indice"] =="stand T") {
         echo '<p>'.$tab_info["anecdote"].'</p>';
