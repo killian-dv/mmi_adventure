@@ -481,7 +481,7 @@ function test_stand($mabd, $ekip_id){
       die();
   }
   foreach($resultat as $value){
-    if ($value['total_indice']==6 or $value['total_indice']==12 or $value['total_indice']==18 or $value['total_indice']==24 or $value['total_indice']==30){
+    if ($value['total_indice']==5 or $value['total_indice']==11 or $value['total_indice']==17 or $value['total_indice']==23 or $value['total_indice']==29){
       $req2 = 'SELECT stand_1, stand_2, stand_3, stand_4, stand_5 FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
       try {
         $resultats2 = $mabd->query($req2);

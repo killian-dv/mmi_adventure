@@ -64,7 +64,7 @@
         $mabd = connexion_mmi_adventure();
         $total_indice = recup_compteur($mabd, $_COOKIE['id_ekip']);
         deconnexion_mmi_adventure($mabd);
-        if ($total_indice==6 or $total_indice==12 or $total_indice==18 or $total_indice==24 or $total_indice==30) {
+        if ($total_indice==5 or $total_indice==11 or $total_indice==17 or $total_indice==23 or $total_indice==29) {
             echo '<p>Vous devez vous rendre au stand '.$numero_stand .' (c\'est obligatoire sinon tu ne peux pas continuer l\'aventure).';
         }
     }
