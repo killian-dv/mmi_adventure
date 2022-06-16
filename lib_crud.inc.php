@@ -87,109 +87,109 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "ocSD7SmpU5Ydb7") { 
       $numero_indice=9;
       $bdd_indice="indice_9";
-      $anecdote = 'Vous êtes dans un endroit sombre ';
+      $anecdote = 'Vous êtes positionné dans un endroit sombre du bâtiment, sortez vite avant que des plus gros geeks que vous, bien boutonneux arrive et vous touche de partout !';
     }
     // indice n°10
     if ($indice_id == "bfw8KCJMhBxyzi") { 
       $numero_indice=10;
       $bdd_indice="indice_10";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Franchement pas mal il était bien caché celui-là, vous êtes dans la salle H007 qui est reliée aussi avec la H008, cette salle est souvent utilisée par les professeurs pour vous faire cours, que ce soit dans le développement ou en création graphique.';
     }
     // indice n°11
     if ($indice_id == "2r9nHDWBnkhT6o") { 
       $numero_indice=11;
       $bdd_indice="indice_11";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Woow vous êtes arrivez au PATIO, coin relax non ? Ici vous pourrez travaillez au soleil tranquillement attention, les bureux des profs donnent sur cette endroit, ne faites pas de bétises.';
     }
     // indice n°12
     if ($indice_id == "x457MNk4yLubaR") { 
       $numero_indice=12;
       $bdd_indice="indice_12";
-      $anecdote = 'lalalalala';
+      $anecdote = 'La H001 la première salle du bâtiment MMI, cette salle vraiment petite accompagnée de son énorme écran, mis à part pour des plans lorsque vous ferez des tournages vidéo, vous n\'irez quasiment jamais dans celle-ci, mais bon avouons qu\'elle est tout de même assez cool.';
     }
     // indice n°13
     if ($indice_id == "jUQqb5BAFRx8aa") { 
       $numero_indice=13;
       $bdd_indice="indice_13";
-      $anecdote = 'lalalalala';
+      $anecdote = 'En MMI pensez à toujours amenez votre pc, sans vous serez perdu pour le reste de l\'année.';
     }
     // indice n°14
     if ($indice_id == "ts8WzX2Kzfs9VS") { 
       $numero_indice=14;
       $bdd_indice="indice_14";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Compliqué pour se faire des rencontres ici ? Le bâtiment TC et la cafétéria sont les endroits clés dans l\'enceinte du BUT pour se faire de bonnes rencontres ;)';
     }
     // indice n°15
     if ($indice_id == "obrHTUxBCux3YJ") { 
       $numero_indice=15;
       $bdd_indice="indice_15";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Levez les yeux de votre PC de temps en temps, nous ne sommes pas dans le monde virtuel !';
     }
     // indice n°16
     if ($indice_id == "Q4vP5TG5vhjUeU") { 
       $numero_indice=16;
       $bdd_indice="indice_16";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Vous avez découvert les toilettes, il y en a à chaque étage aux mêmes endroits !';
     }
     // indice n°17
     if ($indice_id == "U2UMirtsvigjcr") { 
       $numero_indice=17;
       $bdd_indice="indice_17";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Par cette fenêtre, vous pourrez regarder les profs se la couler douce au soleil.';
     }
     // indice n°18
     if ($indice_id == "xF5osYnd6qc8jw") { 
       $numero_indice=18;
       $bdd_indice="indice_18";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Vous êtes dans la salle H205, beau matos n\'est-ce pas ? Il est neuf de cette année, attention une alarme est disposée sur chaque poste de travail !';
     }
     // indice n°19
     if ($indice_id == "BZbdXCP67faRnf") { 
       $numero_indice=19;
       $bdd_indice="indice_19";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Vous êtes à l\'entrée du Bâtiment A, vous y passerez quelques fois pour réaliser des partiels...😳';
     }
     // indice n°20
     if ($indice_id == "8pVTu8vn4h5eH5") { 
       $numero_indice=20;
       $bdd_indice="indice_20";
-      $anecdote = 'lalalalala';
+      $anecdote = 'L\'infirmerie comme au collège et au lycée, il y en a une ici en A111, retenez bien cette salle, cela peut vous être utile.';
     }
     // indice n°21
     if ($indice_id == "DkJ9BerWWoLDUh") { 
       $numero_indice=21;
       $bdd_indice="indice_21";
-      $anecdote = 'lalalalala';
+      $anecdote = 'C\'est la cafétéria ici, les distributeurs sont bien fournis, prenez une boisson, ce n\'est pas cher :)';
     }
     // indice n°22
     if ($indice_id == "vd6k6CLB4G2NwC") { 
       $numero_indice=22;
       $bdd_indice="indice_22";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Ici c\'est en libre accès, vous pouvez durant votre pause faire du sport ou encore vous baladez.';
     }
     // indice n°23
     if ($indice_id == "BPi2Tg2uFWqyuD") { 
       $numero_indice=23;
       $bdd_indice="indice_23";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Ici c\'est chill, vous n\'êtes pas dans un endroit spécial MMI donc vous pourrez croiser les autres formations et vous posez avec.';
     }
     // indice n°24
     if ($indice_id == "o54CJ4rMyVftbE") { 
       $numero_indice=24;
       $bdd_indice="indice_24";
-      $anecdote = 'lalalalala';
+      $anecdote = 'En face de la cafétéria vous trouvez une salle de détente qui est ici, vous pourrez avancer dans vos devoirs, vous reposez, faire des rencontres.';
     }
     // indice n°25
     if ($indice_id == "u6ktLfJ3AU9RYD") { 
       $numero_indice=25;
       $bdd_indice="indice_25";
-      $anecdote = 'lalalalala';
+      $anecdote = 'A l\'IUT il n\'y a pas que des étudiants qui viennent en voiture, certain viennetn';
     }
     // indice n°26
     if ($indice_id == "9heHYNZC762tBh") { 
       $numero_indice=26;
       $bdd_indice="indice_26";
-      $anecdote = 'lalalalala';
+      $anecdote = 'L\'entrée du bâtiment TC, le meilleur bâtiment pour des geek...';
     }
     // indice n°27
     if ($indice_id == "ZNLLQezUcQg6b3") { 
