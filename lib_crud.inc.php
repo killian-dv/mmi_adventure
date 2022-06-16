@@ -499,8 +499,7 @@ function test_stand($mabd, $ekip_id){
       foreach($resultat2 as $indice_number => $value){
         if ($value==NULL){
           $stand_no= array_merge($stand_no, [$indice_number => $value]);
-        }
-    }
+
     $stand_hasard = array_rand($stand_no, 1);
     if ($stand_hasard=='stand_1'){
       return 'B';
@@ -516,6 +515,8 @@ function test_stand($mabd, $ekip_id){
     }
     if ($stand_hasard=='stand_5'){
       return 'T';
+    }
+        }
     }
     }
   }
