@@ -45,7 +45,7 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "URAVnis5Ej55ka") { 
       $numero_indice=2;
       $bdd_indice="indice_2";
-      $anecdote = 'Un déchet à jeter ? L\'IUT n\'est pas une poubelle pensez à jeter tout vos déchet ici ou dans les différentes poubelles qui se trouve dans l’établissement.';
+      $anecdote = 'Un déchet à jeter ? L\'IUT n\'est pas une poubelle, pensez à jeter tous vos déchets ici ou dans les différentes poubelles qui se trouvent dans l’établissement.';
     }
     // indice n°3
     if ($indice_id == "KEwBhcT4NRPi4e") { 
@@ -63,7 +63,7 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "43KLnZYRGJaTph") { 
       $numero_indice=5;
       $bdd_indice="indice_5";
-      $anecdote = 'Voici l\'amphithéâtre, cette endroits avec de nombreuses chaises sur lesquelles vous allez restez des heures et des heures sans forcément savoir dans quel cours vous êtes, c\'est ici que vous avancerez la plupart du temps sur vos trphées clash royale.';
+      $anecdote = 'Voici l\'amphithéâtre, cet endroit avec de nombreuses chaises sur lesquelles vous allez rester des heures et des heures sans forcément savoir dans quel cours vous êtes, c\'est ici que vous avancerez la plupart du temps sur vos trophées Clash Royale.';
     }
     // indice n°6
     if ($indice_id == "uVqWQT944J69Qn") { 
@@ -75,13 +75,13 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "zBkWrW2gw9CWGG") { 
       $numero_indice=7;
       $bdd_indice="indice_7";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Vous êtes dans la salle MAC, impressionnant non ? Pourtant vous serez de temps en temps dans cette salle par petit groupe de 15.';
     }
     // indice n°8
     if ($indice_id == "JbxcUSq5a6M3tf") { 
       $numero_indice=8;
       $bdd_indice="indice_8";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Bienvenue dans la grande salle de Culture Artistique, une salle où vous allez réaliser pour les plus grands artistes vos meilleurs dessins, vos meilleurs création parcontre pour ceux qui ne savent pas dessiner bon courage faites au mieux ! Vous allez apercevoir des recettes dans les couloirs, elles ont été réaliser par des étudiant comme vous au cours de l\'année.';
     }
     // indice n°9
     if ($indice_id == "ocSD7SmpU5Ydb7") { 
