@@ -39,7 +39,7 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "3s8e8RYax3QD9Q") { 
       $numero_indice=1;
       $bdd_indice="indice_1";
-      $anecdote = 'Vous vous trouvez dans le studio, c\'est ici que vous allez tourner de petites vidéos avec les caméras situées dans la petite pièce avec la vitre. Attention, ne tentez pas de voler quelque chose, cette pièce est sous vidéo surveillance.';
+      $anecdote = '';
     }
     // indice n°2
     if ($indice_id == "URAVnis5Ej55ka") { 
@@ -69,7 +69,7 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "uVqWQT944J69Qn") { 
       $numero_indice=6;
       $bdd_indice="indice_6";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Vous vous trouvez dans le studio, c\'est ici que vous allez tourner de petites vidéos avec les caméras situées dans la petite pièce avec la vitre. Attention, ne tentez pas de voler quelque chose, cette pièce est sous vidéo surveillance.';
     }
     // indice n°7
     if ($indice_id == "zBkWrW2gw9CWGG") { 

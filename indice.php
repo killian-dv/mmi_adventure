@@ -13,6 +13,7 @@
     if (verif_indice($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"])==false){
         ajout_qrcode_bdd($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
         compteur($mabd, $_COOKIE['id_ekip'], $tab_info["bdd_indice"]);
+        $total_indice = recup_compteur($mabd, $_COOKIE['id_ekip']);
         
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
             echo '<h1 class="title_numero_indice">Indice n°'.$tab_info["numero_indice"].'</h1>';
@@ -61,12 +62,9 @@
     if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
         echo '<h1>Anecdote</h1>';
         echo '<p>'.$tab_info["anecdote"].'</p>';
-        $mabd = connexion_mmi_adventure();
-        $total_indice = recup_compteur($mabd, $_COOKIE['id_ekip']);
         if ($total_indice==5 or $total_indice==11 or $total_indice==17 or $total_indice==23 or $total_indice==29) {
             echo '<p>Vous devez vous rendre au stand '.$numero_stand .' (c\'est obligatoire sinon tu ne peux pas continuer l\'aventure).';
         }
-        deconnexion_mmi_adventure($mabd);
     }
     if ($tab_info["numero_indice"] == "piege") {
         echo '<p>'.$tab_info["anecdote"]. ' ' .substr($numero_indice_perdu, -1).'</p>';
