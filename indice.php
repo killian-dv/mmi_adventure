@@ -16,6 +16,7 @@
         
         if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
             echo '<h1 class="title_numero_indice">Indice n°'.$tab_info["numero_indice"].'</h1>';
+            $numero_stand = test_stand($mabd, $_COOKIE['id_ekip']);
             date_fin($mabd, $_COOKIE['id_ekip'], $date_fin);
         }
         if ($tab_info["numero_indice"] == "piege") {
@@ -60,6 +61,7 @@
     if (1 <= $tab_info["numero_indice"] && 35 >= $tab_info["numero_indice"]) {
         echo '<h1>Anecdote</h1>';
         echo '<p>'.$tab_info["anecdote"].'</p>';
+        echo '<p>Vous devez vous rendre au stand '.$numero_stand .' (c\'est obligatoire sinon tu ne peux pas continuer l\'aventure).';
     }
     if ($tab_info["numero_indice"] == "piege") {
         echo '<p>'.$tab_info["anecdote"]. ' ' .substr($numero_indice_perdu, -1).'</p>';

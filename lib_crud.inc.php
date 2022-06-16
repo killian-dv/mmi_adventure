@@ -470,3 +470,53 @@ $req2 = 'UPDATE db_adventure SET '.$indice_hasard.'= NULL WHERE equipe_id ='.$ek
   }
 return $indice_hasard;
 }
+
+function test_stand($mabd, $ekip_id){
+  $req = 'SELECT total_indice	FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
+  try {
+    $resultat = $mabd->query($req);
+  } catch (PDOException $e) {
+      // s'il y a une erreur, on l'affiche
+      echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+      die();
+  }
+  foreach($resultat as $value){
+    if ($value['total_indice']==6 or $value['total_indice']==12 or $value['total_indice']==18 or $value['total_indice']==24 or $value['total_indice']==30){
+      $req2 = 'SELECT stand_1, stand_2, stand_3, stand_4, stand_5 FROM db_adventure WHERE equipe_id ='.$ekip_id.'';
+      try {
+        $resultats2 = $mabd->query($req2);
+      } catch (PDOException $e) {
+          // s'il y a une erreur, on l'affiche
+          echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+          die();
+      }
+
+      $resultat2 = $resultats2 ->fetch(PDO::FETCH_ASSOC);
+
+      // la fonction retourne le tableau associatif 
+      // contenant les champs et leurs valeurs
+      $stand_no= array();
+      foreach($resultat2 as $indice_number => $value){
+        if ($value==NULL){
+          $stand_no= array_merge($stand_no, [$indice_number => $value]);
+        }
+    }
+    $stand_hasard = array_rand($stand_no, 1);
+    if ($stand_hasard=='stand_1'){
+      return 'B';
+    }
+    if ($stand_hasard=='stand_2'){
+      return 'K';
+    }
+    if ($stand_hasard=='stand_3'){
+      return 'M';
+    }
+    if ($stand_hasard=='stand_4'){
+      return 'V';
+    }
+    if ($stand_hasard=='stand_5'){
+      return 'T';
+    }
+    }
+  }
+}
