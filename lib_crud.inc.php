@@ -63,7 +63,7 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "43KLnZYRGJaTph") { 
       $numero_indice=5;
       $bdd_indice="indice_5";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Voici l\'amphithéâtre, cette endroits avec de nombreuses chaises sur lesquelles vous allez restez des heures et des heures sans forcément savoir dans quel cours vous êtes, c\'est ici que vous avancerez la plupart du temps sur vos trphées clash royale.';
     }
     // indice n°6
     if ($indice_id == "uVqWQT944J69Qn") { 
