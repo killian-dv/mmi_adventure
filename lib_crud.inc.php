@@ -75,19 +75,19 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "zBkWrW2gw9CWGG") { 
       $numero_indice=7;
       $bdd_indice="indice_7";
-      $anecdote = 'Vous êtes dans la salle MAC, impressionnant non ? Pourtant vous serez de temps en temps dans cette salle par petit groupe de 15.';
+      $anecdote = 'Vous êtes dans la salle MAC, impressionnant non ? Pourtant, vous serez de temps en temps dans cette salle par petits groupes de 15.';
     }
     // indice n°8
     if ($indice_id == "JbxcUSq5a6M3tf") { 
       $numero_indice=8;
       $bdd_indice="indice_8";
-      $anecdote = 'Bienvenue dans la grande salle de Culture Artistique, une salle où vous allez réaliser pour les plus grands artistes vos meilleurs dessins, vos meilleurs création parcontre pour ceux qui ne savent pas dessiner bon courage faites au mieux ! Vous allez apercevoir des recettes dans les couloirs, elles ont été réaliser par des étudiant comme vous au cours de l\'année.';
+      $anecdote = 'Bienvenue dans la grande salle de culture Artistique, une salle où vous allez réaliser pour les plus grands artistes vos meilleurs dessins, vos meilleures créations, par contre pour ceux qui ne savent pas dessiner bon courage faites au mieux ! Vous allez apercevoir des recettes dans les couloirs, elles ont été réaliser par des étudiants comme vous au cours de l\'année.';
     }
     // indice n°9
     if ($indice_id == "ocSD7SmpU5Ydb7") { 
       $numero_indice=9;
       $bdd_indice="indice_9";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Vous êtes dans un endroit sombre ';
     }
     // indice n°10
     if ($indice_id == "bfw8KCJMhBxyzi") { 
