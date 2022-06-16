@@ -63,10 +63,10 @@
         echo '<p>'.$tab_info["anecdote"].'</p>';
         $mabd = connexion_mmi_adventure();
         $total_indice = recup_compteur($mabd, $_COOKIE['id_ekip']);
-        deconnexion_mmi_adventure($mabd);
         if ($total_indice==5 or $total_indice==11 or $total_indice==17 or $total_indice==23 or $total_indice==29) {
             echo '<p>Vous devez vous rendre au stand '.$numero_stand .' (c\'est obligatoire sinon tu ne peux pas continuer l\'aventure).';
         }
+        deconnexion_mmi_adventure($mabd);
     }
     if ($tab_info["numero_indice"] == "piege") {
         echo '<p>'.$tab_info["anecdote"]. ' ' .substr($numero_indice_perdu, -1).'</p>';
