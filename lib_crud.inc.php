@@ -45,7 +45,7 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "URAVnis5Ej55ka") { 
       $numero_indice=2;
       $bdd_indice="indice_2";
-      $anecdote = 'lalalalala';
+      $anecdote = 'Un déchet à jeter ? L\'IUT n\'est pas une poubelle pensez à jeter tout vos déchet ici ou dans les différentes poubelles qui se trouve dans l’établissement.';
     }
     // indice n°3
     if ($indice_id == "KEwBhcT4NRPi4e") { 
