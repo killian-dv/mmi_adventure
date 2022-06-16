@@ -39,7 +39,7 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "3s8e8RYax3QD9Q") { 
       $numero_indice=1;
       $bdd_indice="indice_1";
-      $anecdote = '';
+      $anecdote = 'Si tu veux faire une petite pause sous le soleil de Troyes, tu peux te poser sur un des bancs devant le bâtiment H.';
     }
     // indice n°2
     if ($indice_id == "URAVnis5Ej55ka") { 
