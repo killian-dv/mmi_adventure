@@ -496,9 +496,9 @@ function test_stand($mabd, $ekip_id){
       // la fonction retourne le tableau associatif 
       // contenant les champs et leurs valeurs
       $stand_no= array();
-      foreach($resultat2 as $indice_number => $value){
-        if ($value==NULL){
-          $stand_no= array_merge($stand_no, [$indice_number => $value]);
+      foreach($resultat2 as $indice_number => $value2){
+        if ($value2==NULL){
+          $stand_no= array_merge($stand_no, [$indice_number => $value2]);
 
     $stand_hasard = array_rand($stand_no, 1);
     if ($stand_hasard=='stand_1'){
