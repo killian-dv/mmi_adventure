@@ -459,9 +459,7 @@ function desactivation_indice($mabd, $ekip_id) {
       $indice_trouve= array_merge($indice_trouve, [$indice_number => $value]);
     }
 }
-print_r($indice_trouve);
 $indice_hasard = array_rand($indice_trouve, 1);
-echo $indice_hasard;
 $req2 = 'UPDATE db_adventure SET '.$indice_hasard.'= NULL WHERE equipe_id ='.$ekip_id.'';
   try {
     $insert = $mabd->query($req2);
