@@ -8,5 +8,6 @@
 </head>
 <body>
     <img src="img/planiutkiki.svg" alt="Image de la Carte">
+    <p style="text-align:center;">Plan de l'IUT</p>
 </body>
 </html>
