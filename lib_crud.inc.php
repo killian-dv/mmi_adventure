@@ -221,13 +221,13 @@ function recup_id_indice($indice_id) {
     if ($indice_id == "MXhiUDdRPy65h7") { 
       $numero_indice="piege";
       $bdd_indice="piege_1";
-      $anecdote = 'Vous venez de scanner un QRCode qui n\'est pas sur la carte. Vous devez donc re-scanner le QRCode n°';
+      $anecdote = 'Vous venez de scanner un QRCode qui n\'est pas sur la carte. Vous devez donc re-scanner l\'';
     }
     // piège 2
     if ($indice_id == "rYF9Nr3wKHCead") { 
       $numero_indice="piege";
       $bdd_indice="piege_2";
-      $anecdote = 'Vous venez de scanner un QRCode qui n\'est pas sur la carte. Vous devez donc re-scanner le QRCode n°';
+      $anecdote = 'Vous venez de scanner un QRCode qui n\'est pas sur la carte. Vous devez donc re-scanner l\'';
     }
 
 
