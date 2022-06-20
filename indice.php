@@ -71,7 +71,7 @@
         }
     }
     if ($tab_info["numero_indice"] == "piege") {
-        echo '<p>'.$tab_info["anecdote"]. ' ' .substr($numero_indice_perdu, -1).'</p>';
+        echo '<p>'.$tab_info["anecdote"]. ' ' .$numero_indice_perdu.'</p>';
     }
     if ($tab_info["numero_indice"] == "stand B" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand K" or $tab_info["numero_indice"] =="stand M" or $tab_info["numero_indice"] =="stand V" or $tab_info["numero_indice"] =="stand T") {
         echo '<p>'.$tab_info["anecdote"].'</p>';
